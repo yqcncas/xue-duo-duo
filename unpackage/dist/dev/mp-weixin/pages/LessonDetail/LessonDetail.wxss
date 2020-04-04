@@ -1,0 +1,684 @@
+page::after {
+  display: none;
+}
+.container .header-bg {
+  width: 100vw;
+  height: 430rpx;
+}
+.container .course-info {
+  padding: 30rpx;
+  background-color: #fff;
+}
+.container .course-info .type {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  margin-bottom: 20rpx;
+}
+.container .course-info .type text:first-child {
+  background: #FE5E50;
+  padding: 2rpx 6rpx;
+  margin-right: 22rpx;
+  font-size: 12px;
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  border-radius: 4rpx;
+}
+.container .course-info .type text:last-child {
+  font-size: 17px;
+  color: #333333;
+  font-weight: bold;
+}
+.container .course-info .address text:nth-child(1) {
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #9B9B9B;
+  letter-spacing: -0.34px;
+}
+.container .course-info .address text:nth-child(2) {
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #333333;
+  letter-spacing: -0.34px;
+}
+.container .course-info .time,
+.container .course-info .level {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  margin-bottom: 20rpx;
+}
+.container .course-info .time text:first-child,
+.container .course-info .level text:first-child {
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #9B9B9B;
+  letter-spacing: -0.34px;
+  margin-right: 30rpx;
+}
+.container .course-info .time .time-timer {
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #333333;
+  letter-spacing: -0.34px;
+}
+.container .course-info .level image {
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 6rpx;
+}
+.container .course-info .group-line {
+  margin-top: 30rpx;
+  margin-bottom: 20rpx;
+  width: 100%;
+  height: 8rpx;
+  border-radius: 2px;
+  box-sizing: border-box;
+  background-color: #F0F0F0;
+  position: relative;
+}
+.container .course-info .group-line .group-line-color {
+  width: 50%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
+  background-color: #FE5E50;
+  position: absolute;
+}
+.container .course-info .main {
+  margin-top: 30rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+}
+.container .course-info .main view:first-child {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.container .course-info .main view:first-child text:first-child {
+  font-size: 22px;
+  color: #D0021B;
+  margin-right: 20rpx;
+}
+.container .course-info .main view:first-child text:last-child {
+  font-size: 12px;
+  color: #9B9B9B;
+}
+.container .course-info .main .detail-price {
+  font-family: PingFangSC-Semibold;
+  font-size: 22px;
+  color: #D0021B;
+  letter-spacing: -0.53px;
+}
+.container .course-info .main image {
+  width: 42rpx;
+  height: 38rpx;
+}
+.container .teachar {
+  padding: 30rpx;
+  background-color: #fff;
+}
+.container .teachar > view:first-child {
+  font-size: 17px;
+  font-weight: bold;
+}
+.container .teachar .teacher-list {
+  white-space: nowrap;
+  margin-top: 20rpx;
+}
+.container .teachar .teacher-list .teacher-item {
+  display: inline-block;
+  margin-right: 60rpx;
+}
+.container .teachar .teacher-list .teacher-item > view {
+  height: 90rpx;
+}
+.container .teachar .teacher-list .teacher-item > view image {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.container .teachar .teacher-list .teacher-item > view > view {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  margin-right: 30rpx;
+}
+.container .teachar .teacher-list .teacher-item > view > view text:first-child {
+  font-size: 12px;
+  color: #9B9B9B;
+}
+.container .course-list {
+  padding: 30rpx;
+  background-color: #fff;
+}
+.container .course-list .title {
+  font-size: 17px;
+  font-weight: bold;
+}
+.container .course-list .item {
+  padding: 30rpx 0;
+  border-bottom: 1px solid #F7F7F7;
+}
+.container .course-list .item > view:first-child text:first-child {
+  color: #8987DF;
+  margin-right: 30rpx;
+}
+.container .course-list .item > .vip-handle {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+          justify-content: flex-end;
+}
+.container .course-list .item > .vip-handle > view {
+  margin-top: 20rpx;
+  width: 150rpx;
+  height: 60rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  border-radius: 8rpx;
+  color: #FFFFFF;
+}
+.container .course-list .item > .vip-handle > view.recorded {
+  background: #618FF0;
+}
+.container .course-list .item > .vip-handle > view.live {
+  background: #8987DF;
+}
+.container .course-list .item > .vip-handle > view.not-started {
+  background: #F7F7F7;
+  color: #9B9B9B;
+}
+.container .course-list .total {
+  background: #F7F7F7;
+  border-radius: 30rpx;
+  width: 220rpx;
+  height: 60rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  margin: 0 auto;
+  margin-top: 40rpx;
+  margin-bottom: 20rpx;
+  font-size: 14px;
+  color: #9B9B9B;
+  box-sizing: border-box;
+}
+.container .course-active {
+  padding: 30rpx;
+}
+.container .course-active .title {
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+.container .course-active .active-pic {
+  width: 690rpx;
+  height: 300rpx;
+  border-radius: 6rpx;
+}
+.container .course-detail {
+  padding: 30rpx;
+  background-color: #fff;
+}
+.container .course-detail .title {
+  font-size: 17px;
+  font-weight: bold;
+}
+.container .no-buy {
+  border-top: 1rpx solid #F6F6F6;
+  position: fixed;
+  background: #FFFFFF;
+  bottom: 0;
+  width: 100vw;
+  height: 98rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.container .no-buy > view {
+  -webkit-box-flex: 2;
+  -webkit-flex: 2;
+          flex: 2;
+}
+.container .no-buy > view image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-bottom: 6rpx;
+}
+.container .no-buy .service,
+.container .no-buy .cart {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  color: #9B9B9B;
+}
+.container .no-buy .add-card,
+.container .no-buy .sign {
+  background: #FE9B42;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  color: #FFFFFF;
+}
+.container .no-buy .sign {
+  background: #FE5E50;
+}
+.container .already-buy {
+  border-top: 1rpx solid #F6F6F6;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 98rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  color: #FFFFFF;
+  background: #FFFFFF;
+}
+.container .already-buy .service {
+  width: 125rpx;
+  height: 98rpx;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  color: #9B9B9B;
+}
+.container .already-buy .service image {
+  width: 46rpx;
+  height: 46rpx;
+  margin-bottom: 6rpx;
+}
+.container .already-buy:active {
+  opacity: 0.8;
+}
+.container .already-buy view:last-child {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  background: #8987DF;
+}
+.container .course-list-item {
+  padding-top: 30rpx;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.container .course-list-item .course-list-item-left {
+  margin-right: 30rpx;
+  box-sizing: border-box;
+}
+.container .course-list-item .course-list-item-left text {
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #9B9B9B;
+  letter-spacing: -0.34px;
+}
+.container .course-list-item .course-list-item-right {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+}
+.container .course-list-item .course-list-item-right .course-list-item-right-top text {
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #333333;
+  letter-spacing: -0.34px;
+}
+.container .course-list-item .course-list-item-right .course-list-item-right-bottom {
+  padding-top: 20rpx;
+  box-sizing: border-box;
+}
+.container .course-list-item .course-list-item-right .course-list-item-right-bottom text {
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #9B9B9B;
+  letter-spacing: -0.34px;
+}
+.container .teacher-item-new {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  background-color: #F7F7F7;
+  padding: 20rpx 30rpx;
+  margin-top: 20rpx;
+  box-sizing: border-box;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.container .teacher-item-new:nth-child(1) {
+  margin-top: 0;
+}
+.container .teacher-item-new .teacher-item-new-left image {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.container .teacher-item-new .teacher-item-new-right {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+}
+.container .teacher-item-new .teacher-item-new-right .teacher-item-new-right-left .teacher-item-new-right-left-top,
+.container .teacher-item-new .teacher-item-new-right .teacher-item-new-right-left .teacher-item-new-right-left-bottom {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.container .teacher-item-new .teacher-item-new-right .teacher-item-new-right-left .teacher-item-new-right-left-top view:nth-child(1),
+.container .teacher-item-new .teacher-item-new-right .teacher-item-new-right-left .teacher-item-new-right-left-bottom view:nth-child(1) {
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  color: #9B9B9B;
+  letter-spacing: -0.29px;
+  margin-right: 20rpx;
+  box-sizing: border-box;
+}
+.container .teacher-item-new .teacher-item-new-right .teacher-item-new-right-left .teacher-item-new-right-left-top view:nth-child(2),
+.container .teacher-item-new .teacher-item-new-right .teacher-item-new-right-left .teacher-item-new-right-left-bottom view:nth-child(2) {
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  color: #333333;
+  letter-spacing: -0.29px;
+}
+.container .teacher-item-new .teacher-item-new-right .teacher-item-new-right-right image {
+  width: 16rpx;
+  height: 26rpx;
+}
+.container .group-main-item-bottom-footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+}
+.container .group-main-item-bottom-footer .group-main-item-bottom-footer-left {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.container .group-main-item-bottom-footer .group-main-item-bottom-footer-left .shengyushijian {
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #9B9B9B;
+  letter-spacing: -0.34px;
+  text-align: justify;
+}
+.container .group-main-item-bottom-footer .group-main-item-bottom-footer-left .shengyushijian-timer {
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #518FFF;
+  letter-spacing: -0.34px;
+  text-align: justify;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+}
+.container .group-main-item-bottom-footer .group-main-item-bottom-footer-right.manren {
+  width: 80rpx;
+  height: 34rpx;
+  background: rgba(254, 94, 80, 0.3);
+  border-radius: 2px;
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  color: #FE5E50;
+  letter-spacing: -0.29px;
+  text-align: justify;
+  text-align: center;
+}
+.container .group-main-item-bottom-footer .group-main-item-bottom-footer-right .cantuan {
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #FE9B42;
+  letter-spacing: -0.34px;
+  text-align: justify;
+}
+.container .group-main-item-bottom-footer .group-main-item-bottom-footer-right .jietuan {
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #151515;
+  letter-spacing: -0.34px;
+  text-align: justify;
+}
+
+.uni-popup__wrapper-box {
+  width: 750rpx;
+  background: #FFFFFF;
+  border-radius: 7px 7px 0 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+  position: fixed !important;
+  left: 0;
+  bottom: 0;
+  padding: 30rpx;
+  box-sizing: border-box;
+  z-index: 999;
+}
+.uni-popup__wrapper-box .popupPay-header-lessondetail {
+  height: 48rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+}
+.uni-popup__wrapper-box .popupPay-header-lessondetail .popupPay-header-left {
+  font-family: PingFangSC-Semibold;
+  font-size: 17px;
+  color: #333333;
+  letter-spacing: -0.41px;
+  font-weight: bold;
+}
+.uni-popup__wrapper-box .popupPay-header-lessondetail .popupPay-header-right {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  text-align: right;
+  color: #B2B2B2;
+}
+.uni-popup__wrapper-box .popupPay-header-lessondetail .popupPay-header-right image {
+  width: 26rpx;
+  height: 28rpx;
+}
+.uni-popup__wrapper-box .popupPay-center-lessondetail {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  background: #F7F7F7;
+  padding: 20rpx 30rpx;
+  margin-top: 20rpx;
+  box-sizing: border-box;
+}
+.uni-popup__wrapper-box .popupPay-center-lessondetail .popupPay-center-lessondetail-left {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.uni-popup__wrapper-box .popupPay-center-lessondetail .popupPay-center-lessondetail-left .popupPay-center-lessondetail-left-avatar image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.uni-popup__wrapper-box .popupPay-center-lessondetail .popupPay-center-lessondetail-left .popupPay-center-lessondetail-left-main {
+  padding-left: 30rpx;
+  box-sizing: border-box;
+}
+.uni-popup__wrapper-box .popupPay-center-lessondetail .popupPay-center-lessondetail-left .popupPay-center-lessondetail-left-main .popupPay-center-lessondetail-left-main-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  padding-bottom: 10rpx;
+  box-sizing: border-box;
+}
+.uni-popup__wrapper-box .popupPay-center-lessondetail .popupPay-center-lessondetail-left .popupPay-center-lessondetail-left-main .popupPay-center-lessondetail-left-main-item .popupPay-center-lessondetail-left-main-item-left {
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  color: #9B9B9B;
+  letter-spacing: -0.29px;
+}
+.uni-popup__wrapper-box .popupPay-center-lessondetail .popupPay-center-lessondetail-left .popupPay-center-lessondetail-left-main .popupPay-center-lessondetail-left-main-item .popupPay-center-lessondetail-left-main-item-right {
+  padding-left: 20rpx;
+  box-sizing: border-box;
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  color: #333333;
+  letter-spacing: -0.29px;
+}
+.uni-popup__wrapper-box .popupPay-center-lessondetail .popupPay-center-lessondetail-right-circle {
+  width: 44rpx;
+  height: 44rpx;
+  border: 1rpx solid #B2B2B2;
+  border-radius: 50%;
+  box-sizing: border-box;
+  position: relative;
+}
+.uni-popup__wrapper-box .popupPay-center-lessondetail .popupPay-center-lessondetail-right-circle .active-circle {
+  width: 29.4rpx;
+  height: 29.4rpx;
+  border-radius: 50%;
+  box-sizing: border-box;
+  background: #FE5E50;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-49%, -49%);
+          transform: translate(-49%, -49%);
+}
+.uni-popup__wrapper-box .popupPay-button {
+  margin: 30rpx;
+  border-radius: 20px;
+  box-sizing: border-box;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  background: #FE5E50;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #FFFFFF;
+  letter-spacing: -0.34px;
+}
+

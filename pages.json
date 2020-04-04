@@ -1,0 +1,203 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "学多多"
+			}
+		},
+		{
+			"path": "pages/find/find",
+			"style": {
+				"navigationBarTitleText": "发现"
+			}
+		},
+		{
+			"path": "pages/note/note",
+			"style": {
+				"navigationBarTitleText": "心得"
+			}
+		},
+		{
+			"path": "pages/my/my",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/Withdraw/Withdraw",
+			"style": {
+				"navigationBarTitleText": "提现"
+			}
+		},
+		{
+			"path": "pages/Special/Special",
+			"style": {
+				"navigationBarTitleText": "专题课程"
+			}
+		},
+		{
+			"path": "pages/Outline/Outline",
+			"style": {
+				"navigationBarTitleText": "课程大纲"
+			}
+		},
+		{
+			"path": "pages/Recharge/Recharge",
+			"style": {
+				"navigationBarTitleText": "充值"
+			}
+		},
+		{
+			"path": "pages/Shopcart/ShopCart",
+			"style": {
+				"navigationBarTitleText": "购物车"
+			}
+		},
+		{
+			"path": "pages/orderDeatail/OrderDetail",
+			"style": {
+				"navigationBarTitleText": "订单详情"
+			}
+		},
+		{
+			"path": "pages/LessonDetail/LessonDetail",
+			"style": {
+				"navigationBarTitleText": "课程详情"
+			}
+		},
+		{
+			"path": "pages/my/MyMoney",
+			"style": {
+				"navigationBarTitleText": "我的学币"
+			}
+		},
+		{
+			"path": "pages/my/SystemSetting",
+			"style": {
+				"navigationBarTitleText": "系统设置"
+			}
+		},
+		{
+			"path": "pages/my/MyInfo",
+			"style": {
+				"navigationBarTitleText": "个人资料"
+			}
+		},
+		{
+			"path": "pages/ClassTrue/ClassTrue",
+			"style": {
+				"navigationBarTitleText": "设置年级"
+			}
+		},
+		{
+			"path": "pages/TeacherDetail/TeacherDetail",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/NoteDetail/NoteDeatail",
+			"style": {
+				"navigationBarTitleText": "动态详情"
+			}
+		},
+		{
+			"path": "pages/Group/Group",
+			"style": {
+				"navigationBarTitleText": "拼团"
+			}
+		},
+		{
+			"path": "pages/rich-text/rich-text",
+			"style": {
+				"navigationBarTitleText": "文章详情"
+			}
+		},
+		{
+			"path": "pages/publish/publish",
+			"style": {
+				"navigationBarTitleText": "发布心得"
+			}
+		},
+		{
+			"path": "pages/invite/invite",
+			"style": {
+				"navigationBarTitleText": "邀请好友"
+			}
+		},
+		{
+			"path": "pages/MyStudyMoney/MyStudyMoney",
+			"style": {
+				"navigationBarTitleText": "我的学币"
+			}
+		},
+		{
+			"path": "pages/MyMoney/Mymoney",
+			"style": {
+				"navigationBarTitleText": "我的金币"
+			}
+		},
+		{
+			"path": "pages/CustomMade/CustomMade",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/search/search",
+			"style": {
+				"navigationBarTitleText": "搜索"
+			}
+		},
+		{
+			"path": "pages/GroupOrder/GroupOrder",
+			"style": {
+				"navigationBarTitleText": "我的拼团",
+				"enablePullDownRefresh": true
+ 			}
+		},
+		{
+			"path": "pages/order/order",
+			"style": {
+				"navigationBarTitleText": "订单列表",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 300
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#FFFFFF"
+	},
+	"tabBar": {
+		"borderStyle": "white",
+		"color": "#9b9b9b",
+		"selectedColor": "#3c3c3c",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"iconPath": "static/image/tabbar/lesson.png",
+			"selectedIconPath": "static/image/tabbar/lesson-active.png",
+			"text": "选课"
+		}, {
+			"pagePath": "pages/find/find",
+			"iconPath": "static/image/tabbar/find.png",
+			"selectedIconPath": "static/image/tabbar/find-active.png",
+			"text": "发现"
+			
+		}, {
+			"pagePath": "pages/note/note",
+			"iconPath": "static/image/tabbar/star.png",
+			"selectedIconPath": "static/image/tabbar/star-active.png",
+			"text": "心得"
+		}, {
+			"pagePath": "pages/my/my",
+			"iconPath": "static/image/tabbar/user.png",
+			"selectedIconPath": "static/image/tabbar/user-active.png",
+			"text": "我的"
+		}]
+	}
+}

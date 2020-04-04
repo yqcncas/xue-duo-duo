@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "充值",
+  "usingComponents": {
+    "uni-popup": "/components/uni-popup/uni-popup",
+    "submit-button": "/components/SubmitButton/SubmitButton"
+  }
+}

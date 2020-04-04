@@ -1,0 +1,44 @@
+.outline.data-v-3c046672 {
+  background-color: #fff;
+}
+.outline .outline-item.data-v-3c046672 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 160rpx;
+  padding: 30rpx;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #F7F7F7;
+}
+.outline .outline-item .outline-item-left.data-v-3c046672 {
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #9B9B9B;
+  letter-spacing: -0.34px;
+}
+.outline .outline-item .outline-item-right.data-v-3c046672 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  margin-left: 30rpx;
+  box-sizing: border-box;
+}
+.outline .outline-item .outline-item-right .outline-item-right-top.data-v-3c046672 {
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #333333;
+  letter-spacing: -0.34px;
+}
+.outline .outline-item .outline-item-right .outline-item-right-bottom.data-v-3c046672 {
+  margin-top: 20rpx;
+  box-sizing: border-box;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #9B9B9B;
+  letter-spacing: -0.34px;
+}
+

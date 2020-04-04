@@ -1,0 +1,233 @@
+page {
+  background: #F7F7F7;
+}
+.container .list {
+  margin-bottom: 110rpx;
+}
+.container .list > view {
+  padding: 30rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.container .list > view:nth-last-child(2) {
+  padding-bottom: 0;
+}
+.container .list > view:last-child {
+  padding: 0;
+}
+.container .list > view .icon {
+  border-radius: 50%;
+  box-sizing: border-box;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #ddd;
+  margin-right: 22rpx;
+}
+.container .list > view icon {
+  margin-right: 22rpx;
+}
+.container .list > view > .main {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  background: #FFFFFF;
+  padding: 30rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  border-radius: 7px;
+}
+.container .list > view > .main .course-name {
+  position: absolute;
+  top: 30rpx;
+  left: -8rpx;
+  width: 126rpx;
+  height: 60rpx;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH4AAAA8CAYAAAHXtD55AAAABGdBTUEAALGPC/xhBQAABSFJREFUeAHtXD1sHEUUnrdek8QWGOEqqUKaICOhpAwmFQYJCQefsVFC4TshQ0MRaJOGAqhSBEWhID+6swSJOMt3JFDFqVBImTRISZOkwkjGJgSRvzvv4721Jtrb3F3udqWb23kzxc3O3uy8933f/O3s7EIwN4UqRfBSXKsA1PV0BZSqexMX4C1Ugb1PXADmp26nKwDVTi4A0qrAhaQKqT1ITCK7zUokLgBGhkfCQpISACe+v5eqAG04MQQtf+ICtAdqcWI8VXNOXQ+eeJLgIFU1SGCv4ZLUvUFDaV0mtHG+LH0lSGHciAO6+mu/e84AG2Yn8KPcPj422gpAwQOjDhihn2nnYMy4sc4HwJs3hhxKS2eMGDfW43HzYsQ69LjCwZfaMMc9NY4q+MqYcTYc7ed7ilyjRsR0M35dUJIY87mArzOCnA2TA+fMGUc86P/y98bwowfr/80sXwl1YK96FYwOqb0C2cwOKO+o3+wP28/BVm8HfLe0Ig68sbHVZI2icX0jCpx9Mdbb9ZIIWkS7DAuVp2q59eDBGzgApepEM7KfYqNZpqyeg12DW+CL8uNW/lutPN6qPWoFnM9bDZ4Bbi5UzO7m43iwHjwDxnrtBhZyx0WCDwkI8DDO5f6KEiBCeQ0YFY5Gbyblzu1pJPCrf64WgkAVNTsm7q60baPx4sQbvxt1oMfG5VZ7gAuiOrxoxYJS5T2R4AH8cK4vDjytld2D0uJlrgXiwKt3B1/S1V8UeAA4DR+UN2SCL1U+1sA5FqM8eIN7o8DFgKf1uxUolq/LBL9Q2REHLkJ58ODrZsBlgC9WjooED97Wl1sBt1p5msndhOL5OyLB08bEpouWUTKsHudpv/CFKNj4sd3gUU3i57Pb4qB12mrwIci1+l0NNh5bD55WbJ+j6n8oDpzT1oNnkIjqB47jQQR4Bk0PLH6TC17hPvw0NxolQIzyIeh/cVUseJr4AM5NHdYEyFKeUBMBT57WigPPqpP6NziW+8SG7vj8ysrqfRoHh5gJDpIeVHrvX7oyrMArbUKX9Ru2+ZlLvxb8Qe9VWdAFt3lpQmu84Rsm3pYxkSOdJkFazCt7apf/Iq/uWb35VJqw7fDSI9pztB3jQ53HtXjNhMUxtfTPoqIzVNfi7RYclQ/jcLZyNQ7TCR9nxJI0TeLW1PNqN5ysrDWD5IRvxkrGz5HoV1VpaZzG9ZZfUXFjfMZFjrtPW1C+offnXm8nOl/jWnycuQynSfRDUKyc7wSCE74Tlvo8D3Xtj5XvvwZnyzc7ddV19Z0y1af56NXoO2qUFmW6EJ2huBbfp4J24haJfpFeCz/QSd54Htfi44xkJM0fOUkqOkN0wmdE6Kibm2vuA8ei57o9dsJ3y1gf5A93Et+q38XCwZ1J3XHCJ2XO8HW0lXQbBg9vY37ajfGGtTBiHjH4ib7/0fAtw04ccS2+E5b6PA8GeIQ2ki9346bYXXfdkJSVvLSQs6JGhl7RX21v57dr8e3Yydh/NO5vV//cX8fC7J5nue6EfxZDGfufxB/AoHYN56bn27nuhG/HTob/o49Xn6IPGJ9qBcEJ34oZC87Td7vnadJ3DX+cHYjDccLHGbEsTW+M7FE/19bxk+ntUWhO+Cgblh7TSt8L+DD4A/Mzb2qITnjNhIAYsb5Mk74jDNXdxwsQPA4xfJzLJ6vv7B+r17BMb1OOxTNJepMwjt3mND3hawxLb4/naULwrX6N1AnfyI/1qYuTk0OLb+0vWg9UKMD/AaY9V5KquW8fAAAAAElFTkSuQmCC');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+.container .list > view > .main .course-name-text {
+  font-size: 14px;
+  color: #FFFFFF;
+  -webkit-transform: translateY(-4rpx);
+          transform: translateY(-4rpx);
+}
+.container .list > view > .main .price {
+  text-align: right;
+}
+.container .list > view > .main .price-text {
+  text-align: right;
+  font-size: 22px;
+  color: #D0021B;
+}
+.container .list > view > .main .course-title {
+  margin-top: 20rpx;
+  font-size: 17px;
+  font-weight: bold;
+  color: #333333;
+}
+.container .list > view > .main .course-time {
+  font-size: 14px;
+  color: #9B9B9B;
+  margin-top: 10rpx;
+}
+.container .list > view > .main .course-level {
+  margin-top: 16rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.container .list > view > .main .course-level-title {
+  font-size: 14px;
+  color: #9B9B9B;
+  margin-right: 20rpx;
+}
+.container .list > view > .main .course-level-star {
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 6rpx;
+}
+.container .list > view > .main .teacher {
+  margin-top: 30rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+}
+.container .list > view > .main .teacher-left {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.container .list > view > .main .teacher-avatar {
+  width: 56rpx;
+  height: 56rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.container .list > view > .main .teacher-name {
+  font-size: 14px;
+}
+.container .list > view > .main .course-collection {
+  color: #FE5E50;
+  font-size: 14px;
+}
+.container .settle-accounts {
+  box-shadow: 0px -5rpx 5rpx -5rpx rgba(0, 0, 0, 0.06);
+  position: fixed;
+  bottom: 0rpx;
+  background: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  width: calc(100vw - 60rpx);
+  height: 110rpx;
+  padding: 0 30rpx;
+}
+.container .settle-accounts > .main {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.container .settle-accounts > .main > .left {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.container .settle-accounts > .main > .left > icon {
+  margin-right: 20rpx;
+}
+.container .settle-accounts > .main > .right {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.container .settle-accounts > .main > .right > text:last-child {
+  font-size: 12px;
+  color: #9B9B9B;
+}
+.container .settle-accounts > .main > .right > text:last-child {
+  font-size: 18px;
+  color: #D0021B;
+}
+.container .settle-accounts > .confirm {
+  width: 160rpx;
+  height: 70rpx;
+  background: #FE5E50;
+  border-radius: 35rpx;
+  text-align: center;
+  color: #fff;
+  line-height: 70rpx;
+  margin-left: 20rpx;
+}
+.container .settle-accounts > .confirm-no {
+  width: 160rpx;
+  height: 70rpx;
+  background: #C1C1C1;
+  border-radius: 35rpx;
+  text-align: center;
+  color: #fff;
+  line-height: 70rpx;
+  margin-left: 20rpx;
+}
+

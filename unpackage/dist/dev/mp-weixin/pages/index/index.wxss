@@ -1,0 +1,7 @@
+page::after {
+  display: none;
+}
+.index {
+  background-color: #F7F7F7;
+}
+

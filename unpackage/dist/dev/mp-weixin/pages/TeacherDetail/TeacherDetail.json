@@ -1,0 +1,7 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "parser": "/components/jyf-Parser/index",
+    "uni-load-more": "/components/uni-load-more/uni-load-more"
+  }
+}

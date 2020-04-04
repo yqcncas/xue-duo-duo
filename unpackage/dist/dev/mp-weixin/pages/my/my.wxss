@@ -1,0 +1,302 @@
+page {
+  width: 100%;
+  height: 100%;
+}
+page::after {
+  display: none;
+}
+.my {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+.my .myheader {
+  width: 100%;
+  height: 31.8%;
+  background: #FE5E50;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  padding: 9.7% 4% 0;
+  box-sizing: border-box;
+  position: relative;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.my .myheader .avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-transform: translateY(-30rpx);
+          transform: translateY(-30rpx);
+}
+.my .myheader .avatar image {
+  width: 100%;
+}
+.my .myheader .user-info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  margin-left: 4%;
+  box-sizing: border-box;
+  -webkit-transform: translateY(-30rpx);
+          transform: translateY(-30rpx);
+}
+.my .myheader .user-info .user-name {
+  font-family: PingFangSC-Regular;
+  font-size: 17px;
+  color: #FFFFFF;
+  margin-top: 0.3%;
+  box-sizing: border-box;
+  margin-bottom: 6rpx;
+}
+.my .myheader .user-info image {
+  margin-left: 30rpx;
+  box-sizing: border-box;
+}
+.my .myheader .user-install {
+  width: 166rpx;
+  height: 60rpx;
+  background-image: -webkit-linear-gradient(229deg, #FADF64 0%, #F2BB34 100%);
+  background-image: linear-gradient(221deg, #FADF64 0%, #F2BB34 100%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.03), 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 100px 0 0 100px;
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 60rpx;
+  position: absolute;
+  right: 0;
+  margin-top: 20rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+.my .myheader .user-install .icon {
+  content: "";
+  width: 15rpx;
+  height: 15rpx;
+  border-top: 4rpx solid rgba(255, 255, 255, 0.7);
+  border-right: 4rpx solid rgba(255, 255, 255, 0.7);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.my .nav {
+  width: 690rpx;
+  height: 206rpx;
+  padding: 0 4%;
+  box-sizing: border-box;
+  position: absolute;
+  top: 24%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: #FFFFFF;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.03), 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 7px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
+}
+.my .nav .my-line {
+  width: 2rpx;
+  height: 90rpx;
+  background: #F7F7F7;
+}
+.my .nav .nav-left,
+.my .nav .nav-right {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.my .nav .nav-left image,
+.my .nav .nav-right image {
+  width: 30rpx;
+  height: 30rpx;
+}
+.my .nav .nav-left .nav-left-bottom,
+.my .nav .nav-right .nav-left-bottom,
+.my .nav .nav-left .nav-right-bottom,
+.my .nav .nav-right .nav-right-bottom {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.my .nav .nav-left .nav-left-bottom image,
+.my .nav .nav-right .nav-left-bottom image,
+.my .nav .nav-left .nav-right-bottom image,
+.my .nav .nav-right .nav-right-bottom image {
+  width: 32rpx;
+  height: 32rpx;
+}
+.my .nav .nav-left .nav-left-bottom view,
+.my .nav .nav-right .nav-left-bottom view,
+.my .nav .nav-left .nav-right-bottom view,
+.my .nav .nav-right .nav-right-bottom view {
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #9B9B9B;
+  text-align: center;
+  margin-left: 18rpx;
+  box-sizing: border-box;
+}
+.my .nav .nav-left .nav-left-top,
+.my .nav .nav-right .nav-left-top,
+.my .nav .nav-left .nav-right-top,
+.my .nav .nav-right .nav-right-top {
+  font-family: PingFangSC-Semibold;
+  font-size: 24px;
+  color: #333333;
+  text-align: center;
+}
+.my .tool {
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #8E8E93;
+  letter-spacing: 0;
+  padding: 0 4% 0;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+.my .detail {
+  padding: 0 4%;
+  width: 92%;
+  margin-top: 3%;
+  box-sizing: border-box;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: #FFFFFF;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.03), 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 7px;
+}
+.my .detail .detail-item {
+  height: 100rpx;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  border-bottom: 1rpx solid #F4F4F4;
+}
+.my .detail .detail-item .item-img image {
+  width: 30rpx;
+  height: 30rpx;
+}
+.my .detail .detail-item .item-right {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+}
+.my .detail .detail-item .item-right .item-right-right image {
+  width: 30rpx;
+  height: 30rpx;
+}
+.my .my-main {
+  position: relative;
+  top: 160rpx;
+}
+.my .my-main .my-main-header {
+  padding-left: 30rpx;
+  padding-bottom: 20rpx;
+  box-sizing: border-box;
+  font-family: PingFangSC-Semibold;
+  font-size: 17px;
+  color: #333333;
+  letter-spacing: -0.41px;
+  font-weight: bold;
+}
+.my .my-main .my-main-box {
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: 0 2px 7px 0 rgba(254, 94, 80, 0.03), 0 5px 10px 0 rgba(254, 94, 80, 0.05);
+  border-radius: 4px;
+}
+.my .my-main .my-main-box .my-main-item {
+  height: 88rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  padding: 30rpx;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #f7f7f7;
+}
+.my .my-main .my-main-box .my-main-item:last-child {
+  border: none;
+}
+.my .my-main .my-main-box .my-main-item .my-main-item-left {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.my .my-main .my-main-box .my-main-item .my-main-item-left image {
+  width: 60rpx;
+  height: 60rpx;
+}
+.my .my-main .my-main-box .my-main-item .my-main-item-left view {
+  margin-left: 36rpx;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #4A4A4A;
+  letter-spacing: 0;
+}
+.my .my-main .my-main-box .my-main-item .my-main-item-right image {
+  width: 16rpx;
+  height: 26rpx;
+}
+

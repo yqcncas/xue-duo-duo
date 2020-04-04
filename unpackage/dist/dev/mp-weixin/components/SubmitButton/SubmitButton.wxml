@@ -1,0 +1,1 @@
+<view data-event-opts="{{[['tap',[['submitClick',['$event']]]]]}}" class="submit" bindtap="__e">{{submitText}}</view>

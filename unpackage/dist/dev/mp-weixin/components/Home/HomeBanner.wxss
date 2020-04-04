@@ -1,0 +1,57 @@
+.homeBanner {
+  width: 100%;
+  padding: 30rpx;
+  padding-top: 90rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.homeBanner .swiper-item {
+  width: 690rpx;
+  height: 270rpx;
+}
+.homeBanner .swiper-item image {
+  width: 100%;
+}
+.homeBanner .homeBanner-item-box {
+  padding-top: 30rpx;
+  box-sizing: border-box;
+}
+.homeBanner .homeBanner-item-box .homeBanner-item-ui {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.homeBanner .homeBanner-item-box .homeBanner-item-ui .homeBanner-item-li {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.homeBanner .homeBanner-item-box .homeBanner-item-ui .homeBanner-item-li .homeBanner-item-li-top {
+  padding-top: 20rpx;
+  box-sizing: border-box;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #9B9B9B;
+  letter-spacing: -0.34px;
+  text-align: center;
+}
+.homeBanner .homeBanner-item-box .homeBanner-item-ui .homeBanner-item-li .homeBanner-item-li-bottom image {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 20px;
+}
+

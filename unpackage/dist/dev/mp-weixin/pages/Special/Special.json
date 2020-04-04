@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "专题课程",
+  "usingComponents": {
+    "uni-load-more": "/components/uni-load-more/uni-load-more",
+    "home-main-list": "/components/Home/HomeMainList"
+  }
+}

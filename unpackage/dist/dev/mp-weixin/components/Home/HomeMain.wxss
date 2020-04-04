@@ -1,0 +1,243 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.homeMain.data-v-b233083c {
+  width: 100%;
+  min-height: 90rpx;
+  background-color: #fff;
+}
+.homeMain .scroll-item-wrapper.data-v-b233083c {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+            justify-content: space-between;
+    box-sizing: border-box;
+}
+.homeMain .scroll-item-wrapper .scroll-item-ul.data-v-b233083c {
+      display: inline-block;
+      white-space: nowrap;
+}
+.homeMain .scroll-item-wrapper .scroll-item-ul .scroll-item.data-v-b233083c {
+        height: 60rpx;
+        display: inline-block;
+        text-align: center;
+        width: 130rpx;
+        font-size: 14px;
+        color: #C0C0C0;
+        opacity: 0.8;
+        font-family: PingFangSC-Regular;
+        font-size: 14px;
+        color: #9B9B9B;
+        letter-spacing: -0.34px;
+        position: relative;
+}
+.homeMain .scroll-item-wrapper .scroll-item-ul .scroll-item.data-v-b233083c::after {
+          content: '';
+          width: 0;
+          height: 0;
+          border-bottom: 4rpx solid #f40;
+          position: absolute;
+          left: 50%;
+          bottom: 0;
+          -webkit-transform: translateX(-50%);
+                  transform: translateX(-50%);
+          -webkit-transition: all .5s;
+          transition: all .5s;
+}
+.homeMain .scroll-item-wrapper .scroll-item-ul .scroll-item.active.data-v-b233083c {
+          font-size: 16px;
+          color: #f40;
+          font-weight: bold;
+}
+.homeMain .scroll-item-wrapper .scroll-item-ul .scroll-item.active.data-v-b233083c::after {
+            width: 20%;
+}
+.homeMain .noList.data-v-b233083c {
+    text-align: center;
+    line-height: 160rpx;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #B0B2C6;
+    letter-spacing: -0.34px;
+}
+.homeMain .homeMain-scroll-swiper.data-v-b233083c {
+    padding: 30rpx;
+    padding-bottom: 0;
+    box-sizing: border-box;
+    background-color: #f7f7f7;
+    border-radius: 7rpx;
+}
+.homeMain .homeMain-scroll-swiper .homeMain-scroll-swiper-item.data-v-b233083c {
+      width: 690rpx;
+      height: 362rpx;
+      border-radius: 7px;
+      background-color: #fff;
+}
+.homeMain .homeMain-scroll-swiper .homeMain-scroll-swiper-item .homeMain-scroll-swiper-item-top.data-v-b233083c {
+        padding: 30rpx;
+        padding-bottom: 0;
+        box-sizing: border-box;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+                justify-content: space-between;
+}
+.homeMain .homeMain-scroll-swiper .homeMain-scroll-swiper-item .homeMain-scroll-swiper-item-top .homeMain-scroll-swiper-item-text.data-v-b233083c {
+          position: relative;
+          left: -40rpx;
+}
+.homeMain .homeMain-scroll-swiper .homeMain-scroll-swiper-item .homeMain-scroll-swiper-item-top .homeMain-scroll-swiper-item-text image.data-v-b233083c {
+            width: 126rpx;
+            height: 54rpx;
+}
+.homeMain .homeMain-scroll-swiper .homeMain-scroll-swiper-item .homeMain-scroll-swiper-item-top .homeMain-scroll-swiper-item-text .tip-text.data-v-b233083c {
+            position: absolute;
+            font-size: 12px;
+            color: #FFFFFF;
+            left: 50%;
+            top: 40%;
+            -webkit-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+}
+.homeMain .homeMain-scroll-swiper .homeMain-scroll-swiper-item .homeMain-scroll-swiper-item-top .homeMain-scroll-swiper-item-top-price.data-v-b233083c {
+          font-family: PingFangSC-Semibold;
+          font-size: 22px;
+          color: #FF0000;
+          letter-spacing: -0.53px;
+}
+.homeMain .homeMain-scroll-swiper .homeMain-scroll-swiper-item .homeMain-scroll-swiper-item-center.data-v-b233083c {
+        padding-top: 20rpx;
+        padding-left: 30rpx;
+        box-sizing: border-box;
+}
+.homeMain .homeMain-scroll-swiper .homeMain-scroll-swiper-item .homeMain-scroll-swiper-item-center .homeMain-scroll-swiper-item-center-title.data-v-b233083c {
+          font-weight: bold;
+          font-family: PingFangSC-Semibold;
+          font-size: 17px;
+          color: #0D1550;
+          letter-spacing: -0.41px;
+}
+.homeMain .homeMain-scroll-swiper .homeMain-scroll-swiper-item .homeMain-scroll-swiper-item-center .homeMain-scroll-swiper-item-center-time.data-v-b233083c {
+          padding-bottom: 30rpx;
+          padding-top: 10rpx;
+          box-sizing: border-box;
+          font-family: PingFangSC-Regular;
+          font-size: 14px;
+          color: #B0B2C6;
+          letter-spacing: -0.34px;
+}
+.homeMain .homeMain-scroll-swiper .homeMain-scroll-swiper-item .homeMain-scroll-swiper-item-bottom.data-v-b233083c {
+        padding: 0 30rpx;
+        box-sizing: border-box;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+                justify-content: space-between;
+}
+.homeMain .homeMain-scroll-swiper .homeMain-scroll-swiper-item .homeMain-scroll-swiper-item-bottom .homeMain-scroll-swiper-item-bottom-left-box.data-v-b233083c {
+          -webkit-box-flex: 1;
+          -webkit-flex: 1;
+                  flex: 1;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: flex;
+}
+.homeMain .homeMain-scroll-swiper .homeMain-scroll-swiper-item .homeMain-scroll-swiper-item-bottom .homeMain-scroll-swiper-item-bottom-left-box .homeMain-scroll-swiper-item-bottom-left.data-v-b233083c {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+                    align-items: center;
+            padding-left: 40rpx;
+            box-sizing: border-box;
+}
+.homeMain .homeMain-scroll-swiper .homeMain-scroll-swiper-item .homeMain-scroll-swiper-item-bottom .homeMain-scroll-swiper-item-bottom-left-box .homeMain-scroll-swiper-item-bottom-left.data-v-b233083c:nth-child(1) {
+              padding-left: 0;
+}
+.homeMain .homeMain-scroll-swiper .homeMain-scroll-swiper-item .homeMain-scroll-swiper-item-bottom .homeMain-scroll-swiper-item-bottom-left-box .homeMain-scroll-swiper-item-bottom-left image.data-v-b233083c {
+              width: 56rpx;
+              height: 56rpx;
+              border-radius: 50%;
+}
+.homeMain .homeMain-scroll-swiper .homeMain-scroll-swiper-item .homeMain-scroll-swiper-item-bottom .homeMain-scroll-swiper-item-bottom-left-box .homeMain-scroll-swiper-item-bottom-left view.data-v-b233083c {
+              padding-top: 10rpx;
+              box-sizing: border-box;
+              font-family: PingFangSC-Regular;
+              font-size: 12px;
+              color: #0D1550;
+              letter-spacing: -0.29px;
+}
+.homeMain .homeMain-scroll-swiper .homeMain-scroll-swiper-item .homeMain-scroll-swiper-item-bottom .homeMain-scroll-swiper-item-bottom-right.data-v-b233083c {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+                  flex-direction: column;
+          -webkit-box-align: end;
+          -webkit-align-items: flex-end;
+                  align-items: flex-end;
+}
+.homeMain .homeMain-scroll-swiper .homeMain-scroll-swiper-item .homeMain-scroll-swiper-item-bottom .homeMain-scroll-swiper-item-bottom-right .homeMain-scroll-swiper-item-bottom-right-top.data-v-b233083c {
+            padding-bottom: 20rpx;
+            box-sizing: border-box;
+            font-family: PingFangSC-Regular;
+            font-size: 14px;
+            color: #FE5E50;
+            letter-spacing: -0.34px;
+}
+.homeMain .homeMain-scroll-swiper .homeMain-scroll-swiper-item .homeMain-scroll-swiper-item-bottom .homeMain-scroll-swiper-item-bottom-right .homeMain-scroll-swiper-item-bottom-right-bottom.data-v-b233083c {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+}
+.homeMain .homeMain-scroll-swiper .homeMain-scroll-swiper-item .homeMain-scroll-swiper-item-bottom .homeMain-scroll-swiper-item-bottom-right .homeMain-scroll-swiper-item-bottom-right-bottom .star image.data-v-b233083c {
+              width: 28rpx;
+              height: 28rpx;
+              margin-left: 6rpx;
+              box-sizing: border-box;
+}
+.homeMain .homeMain-scroll-swiper .homeMain-scroll-swiper-item .homeMain-scroll-swiper-item-bottom .homeMain-scroll-swiper-item-bottom-right .homeMain-scroll-swiper-item-bottom-right-bottom .homeMain-scroll-swiper-item-bottom-right-bottom-text.data-v-b233083c {
+              margin-left: 20rpx;
+              box-sizing: border-box;
+              font-family: PingFangSC-Regular;
+              font-size: 14px;
+              color: #B0B2C6;
+              letter-spacing: -0.34px;
+}
+

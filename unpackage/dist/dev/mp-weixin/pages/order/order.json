@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "订单列表",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 300,
+  "usingComponents": {
+    "uni-load-more": "/components/uni-load-more/uni-load-more",
+    "uni-popup": "/components/uni-popup/uni-popup"
+  }
+}

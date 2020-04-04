@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "学多多",
+  "usingComponents": {
+    "home-header": "/components/Home/HomeHeader",
+    "home-banner": "/components/Home/HomeBanner",
+    "home-main": "/components/Home/HomeMain"
+  }
+}

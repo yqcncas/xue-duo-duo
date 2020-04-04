@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "发现",
+  "usingComponents": {
+    "uni-load-more": "/components/uni-load-more/uni-load-more"
+  }
+}

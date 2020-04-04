@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "课程详情",
+  "usingComponents": {
+    "uni-popup": "/components/uni-popup/uni-popup",
+    "parser": "/components/jyf-Parser/index"
+  }
+}
