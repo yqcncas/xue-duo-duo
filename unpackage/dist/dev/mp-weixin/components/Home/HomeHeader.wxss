@@ -54,6 +54,13 @@
   height: 60rpx;
   background: #F7F7F7;
   border-radius: 15px;
+  opacity: 0.8;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #9B9B9B;
+  line-height: 22px;
+  text-align: center;
+  line-height: normal;
 }
 .homeheader .homeheader-center image.data-v-20540e76 {
   width: 28rpx;

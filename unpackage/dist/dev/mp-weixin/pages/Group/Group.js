@@ -94,8 +94,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components = {
-  "uni-load-more": () =>
-    __webpack_require__.e(/*! import() | components/uni-load-more/uni-load-more */ "components/uni-load-more/uni-load-more").then(__webpack_require__.bind(null, /*! @/components/uni-load-more/uni-load-more.vue */ 277))
+  "uni-load-more": function() {
+    return __webpack_require__.e(/*! import() | components/uni-load-more/uni-load-more */ "components/uni-load-more/uni-load-more").then(__webpack_require__.bind(null, /*! @/components/uni-load-more/uni-load-more.vue */ 277))
+  }
 }
 var render = function() {
   var _vm = this
@@ -134,7 +135,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 33));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};} //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/regenerator */ 33));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};} //
 //
 //
 //
@@ -220,13 +221,13 @@ var _default =
 
   methods: {
     // 更换科目
-    handleSelectLesson: function () {var _handleSelectLesson = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee(e) {var _this = this;var lessonIndex, res, _loop, i, _res, _loop2, _i;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:
+    handleSelectLesson: function handleSelectLesson(e) {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var lessonIndex, res, _loop, i, _res, _loop2, _i;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:
                 lessonIndex = e.detail.value;
-                this.isLessonIndex = lessonIndex;
-                console.log(this.lessonSelsectId[lessonIndex]);if (!
-                this.isClassIndex) {_context.next = 12;break;}_context.next = 6;return (
-                  this.$fetch(this.$api.assembleList, { classTypeId: this.classSelectId[this.isClassIndex], courseTypeId: this.lessonSelsectId[this.isLessonIndex], pageNum: this.pageNum, pageSize: 10, assembleStatus: 0 }, 'POST', 'FORM'));case 6:res = _context.sent;
-                this.groupList = res.data;_loop = function _loop(
+                _this.isLessonIndex = lessonIndex;
+                console.log(_this.lessonSelsectId[lessonIndex]);if (!
+                _this.isClassIndex) {_context.next = 12;break;}_context.next = 6;return (
+                  _this.$fetch(_this.$api.assembleList, { classTypeId: _this.classSelectId[_this.isClassIndex], courseTypeId: _this.lessonSelsectId[_this.isLessonIndex], pageNum: _this.pageNum, pageSize: 10, assembleStatus: 0 }, 'POST', 'FORM'));case 6:res = _context.sent;
+                _this.groupList = res.data;_loop = function _loop(
                 i) {
                   // 线长处理
                   var lineWidth = _this.groupList[i].actualNum / _this.groupList[i].estimateNum * 100;
@@ -249,11 +250,11 @@ var _default =
                       return;
                     }
                     _this.countDown(_this.difftimes[i]);
-                  }, 1000);};for (i = 0; i < this.groupList.length; i++) {_loop(i);
+                  }, 1000);};for (i = 0; i < _this.groupList.length; i++) {_loop(i);
                 }_context.next = 18;break;case 12:_context.next = 14;return (
 
-                  this.$fetch(this.$api.assembleList, { courseTypeId: this.lessonSelsectId[this.isLessonIndex], pageNum: this.pageNum, pageSize: 10, assembleStatus: 0 }, 'POST', 'FORM'));case 14:_res = _context.sent;
-                this.groupList = _res.data;_loop2 = function _loop2(
+                  _this.$fetch(_this.$api.assembleList, { courseTypeId: _this.lessonSelsectId[_this.isLessonIndex], pageNum: _this.pageNum, pageSize: 10, assembleStatus: 0 }, 'POST', 'FORM'));case 14:_res = _context.sent;
+                _this.groupList = _res.data;_loop2 = function _loop2(
                 _i) {
                   // 线长处理
                   var lineWidth = _this.groupList[_i].actualNum / _this.groupList[_i].estimateNum * 100;
@@ -276,19 +277,19 @@ var _default =
                       return;
                     }
                     _this.countDown(_this.difftimes[_i]);
-                  }, 1000);};for (_i = 0; _i < this.groupList.length; _i++) {_loop2(_i);
-                }case 18:case "end":return _context.stop();}}}, _callee, this);}));function handleSelectLesson(_x) {return _handleSelectLesson.apply(this, arguments);}return handleSelectLesson;}(),
+                  }, 1000);};for (_i = 0; _i < _this.groupList.length; _i++) {_loop2(_i);
+                }case 18:case "end":return _context.stop();}}}, _callee);}))();
 
 
-
+    },
     // 更换年级
-    handleSelectClass: function () {var _handleSelectClass = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2(e) {var _this2 = this;var classIndex, res, _loop3, i, _res2, _loop4, _i2;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:
+    handleSelectClass: function handleSelectClass(e) {var _this2 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var classIndex, res, _loop3, i, _res2, _loop4, _i2;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:
                 classIndex = e.detail.value;
-                this.isClassIndex = classIndex;
-                console.log(this.classSelectId[classIndex]);if (!
-                this.isLessonIndex) {_context2.next = 12;break;}_context2.next = 6;return (
-                  this.$fetch(this.$api.assembleList, { classTypeId: this.classSelectId[classIndex], courseTypeId: this.lessonSelsectId[this.isLessonIndex], pageNum: this.pageNum, pageSize: 10, assembleStatus: 0 }, 'POST', 'FORM'));case 6:res = _context2.sent;
-                this.groupList = res.data;_loop3 = function _loop3(
+                _this2.isClassIndex = classIndex;
+                console.log(_this2.classSelectId[classIndex]);if (!
+                _this2.isLessonIndex) {_context2.next = 12;break;}_context2.next = 6;return (
+                  _this2.$fetch(_this2.$api.assembleList, { classTypeId: _this2.classSelectId[classIndex], courseTypeId: _this2.lessonSelsectId[_this2.isLessonIndex], pageNum: _this2.pageNum, pageSize: 10, assembleStatus: 0 }, 'POST', 'FORM'));case 6:res = _context2.sent;
+                _this2.groupList = res.data;_loop3 = function _loop3(
                 i) {
                   // 线长处理
                   var lineWidth = _this2.groupList[i].actualNum / _this2.groupList[i].estimateNum * 100;
@@ -311,11 +312,11 @@ var _default =
                       return;
                     }
                     _this2.countDown(_this2.difftimes[i]);
-                  }, 1000);};for (i = 0; i < this.groupList.length; i++) {_loop3(i);
+                  }, 1000);};for (i = 0; i < _this2.groupList.length; i++) {_loop3(i);
                 }_context2.next = 18;break;case 12:_context2.next = 14;return (
 
-                  this.$fetch(this.$api.assembleList, { classTypeId: this.classSelectId[this.isClassIndex], pageNum: this.pageNum, pageSize: 10, assembleStatus: 0 }, 'POST', 'FORM'));case 14:_res2 = _context2.sent;
-                this.groupList = _res2.data;_loop4 = function _loop4(
+                  _this2.$fetch(_this2.$api.assembleList, { classTypeId: _this2.classSelectId[_this2.isClassIndex], pageNum: _this2.pageNum, pageSize: 10, assembleStatus: 0 }, 'POST', 'FORM'));case 14:_res2 = _context2.sent;
+                _this2.groupList = _res2.data;_loop4 = function _loop4(
                 _i2) {
                   // 线长处理
                   var lineWidth = _this2.groupList[_i2].actualNum / _this2.groupList[_i2].estimateNum * 100;
@@ -338,15 +339,15 @@ var _default =
                       return;
                     }
                     _this2.countDown(_this2.difftimes[_i2]);
-                  }, 1000);};for (_i2 = 0; _i2 < this.groupList.length; _i2++) {_loop4(_i2);
-                }case 18:case "end":return _context2.stop();}}}, _callee2, this);}));function handleSelectClass(_x2) {return _handleSelectClass.apply(this, arguments);}return handleSelectClass;}(),
+                  }, 1000);};for (_i2 = 0; _i2 < _this2.groupList.length; _i2++) {_loop4(_i2);
+                }case 18:case "end":return _context2.stop();}}}, _callee2);}))();
 
 
-
+    },
     // 列表数据
-    initGroupList: function () {var _initGroupList = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee3() {var _this3 = this;var res, _loop5, i;return _regenerator.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:_context3.next = 2;return (
-                  this.$fetch(this.$api.assembleList, { pageNum: this.pageNum, pageSize: 10, assembleStatus: 0 }, 'POST', 'FORM'));case 2:res = _context3.sent;
-                this.groupList = res.data;_loop5 = function _loop5(
+    initGroupList: function initGroupList() {var _this3 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee3() {var res, _loop5, i;return _regenerator.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:_context3.next = 2;return (
+                  _this3.$fetch(_this3.$api.assembleList, { pageNum: _this3.pageNum, pageSize: 10, assembleStatus: 0 }, 'POST', 'FORM'));case 2:res = _context3.sent;
+                _this3.groupList = res.data;_loop5 = function _loop5(
                 i) {
                   // 线长处理
                   var lineWidth = _this3.groupList[i].actualNum / _this3.groupList[i].estimateNum * 100;
@@ -369,9 +370,9 @@ var _default =
                       return;
                     }
                     _this3.countDown(_this3.difftimes[i]);
-                  }, 1000);};for (i = 0; i < this.groupList.length; i++) {_loop5(i);
-                }case 6:case "end":return _context3.stop();}}}, _callee3, this);}));function initGroupList() {return _initGroupList.apply(this, arguments);}return initGroupList;}(),
-
+                  }, 1000);};for (i = 0; i < _this3.groupList.length; i++) {_loop5(i);
+                }case 6:case "end":return _context3.stop();}}}, _callee3);}))();
+    },
     // 倒计时处理
     countDown: function countDown(difftimes) {
       for (var i = 0; i < this.groupList.length; i++) {
@@ -412,32 +413,32 @@ var _default =
       this.countDownTimer[i] = null;
     },
     // 科目列表
-    initLessonTab: function () {var _initLessonTab = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee4() {var _ref, res, i;return _regenerator.default.wrap(function _callee4$(_context4) {while (1) {switch (_context4.prev = _context4.next) {case 0:_context4.next = 2;return (
-                  this.$fetch(this.$api.getCourseType, {}, 'Get'));case 2:_ref = _context4.sent;res = _ref.data;
-                this.lessonList = res;
-                for (i = 0; i < this.lessonList.length; i++) {
-                  this.lessonSelsect.push(this.lessonList[i].dictLabel);
-                  this.lessonSelsectId.push(this.lessonList[i].dictValue);
-                }case 6:case "end":return _context4.stop();}}}, _callee4, this);}));function initLessonTab() {return _initLessonTab.apply(this, arguments);}return initLessonTab;}(),
-
+    initLessonTab: function initLessonTab() {var _this4 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee4() {var _yield$_this4$$fetch, res, i;return _regenerator.default.wrap(function _callee4$(_context4) {while (1) {switch (_context4.prev = _context4.next) {case 0:_context4.next = 2;return (
+                  _this4.$fetch(_this4.$api.getCourseType, {}, 'Get'));case 2:_yield$_this4$$fetch = _context4.sent;res = _yield$_this4$$fetch.data;
+                _this4.lessonList = res;
+                for (i = 0; i < _this4.lessonList.length; i++) {
+                  _this4.lessonSelsect.push(_this4.lessonList[i].dictLabel);
+                  _this4.lessonSelsectId.push(_this4.lessonList[i].dictValue);
+                }case 6:case "end":return _context4.stop();}}}, _callee4);}))();
+    },
     // 获取年级
-    initClassTrueInfo: function () {var _initClassTrueInfo = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee5() {var res, i, j;return _regenerator.default.wrap(function _callee5$(_context5) {while (1) {switch (_context5.prev = _context5.next) {case 0:_context5.next = 2;return (
-                  this.$fetch(this.$api.getClassType, {}, 'GET'));case 2:res = _context5.sent;
+    initClassTrueInfo: function initClassTrueInfo() {var _this5 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee5() {var res, i, j;return _regenerator.default.wrap(function _callee5$(_context5) {while (1) {switch (_context5.prev = _context5.next) {case 0:_context5.next = 2;return (
+                  _this5.$fetch(_this5.$api.getClassType, {}, 'GET'));case 2:res = _context5.sent;
                 console.log(res);if (!(
                 res.code !== 0)) {_context5.next = 6;break;}return _context5.abrupt("return", uni.showToast({
                   icon: 'none',
                   title: '请求失败' }));case 6:
 
-                this.gradeTree = res.data;
-                console.log(this.gradeTree);
-                for (i = 0; i < this.gradeTree.length; i++) {
-                  for (j = 0; j < this.gradeTree[i].child.length; j++) {
-                    this.classSelect.push(this.gradeTree[i].child[j].name);
-                    this.classSelectId.push(this.gradeTree[i].child[j].id);
+                _this5.gradeTree = res.data;
+                console.log(_this5.gradeTree);
+                for (i = 0; i < _this5.gradeTree.length; i++) {
+                  for (j = 0; j < _this5.gradeTree[i].child.length; j++) {
+                    _this5.classSelect.push(_this5.gradeTree[i].child[j].name);
+                    _this5.classSelectId.push(_this5.gradeTree[i].child[j].id);
                   }
 
-                }case 9:case "end":return _context5.stop();}}}, _callee5, this);}));function initClassTrueInfo() {return _initClassTrueInfo.apply(this, arguments);}return initClassTrueInfo;}(),
-
+                }case 9:case "end":return _context5.stop();}}}, _callee5);}))();
+    },
 
     goToLessonDetail: function goToLessonDetail(index) {
       uni.navigateTo({

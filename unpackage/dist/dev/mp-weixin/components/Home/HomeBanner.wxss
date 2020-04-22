@@ -6,11 +6,12 @@
   background-color: #fff;
 }
 .homeBanner .swiper-item {
-  width: 690rpx;
-  height: 270rpx;
+  width: 100%;
+  height: 100%;
 }
 .homeBanner .swiper-item image {
   width: 100%;
+  height: 100%;
 }
 .homeBanner .homeBanner-item-box {
   padding-top: 30rpx;

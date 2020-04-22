@@ -5,7 +5,7 @@
 			<image src="../../static/image/index/daosanjiao.png" mode=""></image>
 		</view>
 		<view class="homeheader-center" @click.stop="goToSearch">
-			<input :disabled="true" type="text" placeholder="请输入关键字" placeholder-style="opacity: 0.8;font-family: PingFangSC-Regular;font-size: 14px;color: #9B9B9B;line-height: 22px;text-align:center;">
+			<input :disabled="true" type="text"  value="请输入关键字" placeholder-class= "ip-center">
 			<image src="../../static/image/index/Search.png" mode=""></image>
 		</view>
 		<view class="homeheader-right" @click="goToShopCart">
@@ -18,9 +18,10 @@
 	export default {
 		data () {
 			return {
-				
+				searchFlag: true
 			}
 		},
+	
 		methods: {
 			goToClassTrue () {
 				console.log(this.homeHeaderClassTrue.name == undefined)
@@ -29,9 +30,16 @@
 				})
 			},
 			goToSearch () {
-				uni.navigateTo({
-					url: '../../pages/search/search'
-				})
+				if (this.searchFlag) {
+					this.searchFlag = false
+					setTimeout(() => {
+						this.searchFlag = true
+					}, 700)
+					uni.navigateTo({
+						url: '../../pages/search/search'
+					})
+				}
+				
 			},
 			goToShopCart () {
 				uni.navigateTo({
@@ -90,9 +98,15 @@
 				height: 60rpx;
 				background: #F7F7F7;
 				border-radius: 15px;
-				
-				
+				opacity: 0.8;
+				font-family: PingFangSC-Regular;
+				font-size: 14px;
+				color: #9B9B9B;
+				line-height: 22px;
+				text-align:center;
+				line-height: normal;
 			}
+		
 			image{
 				width: 28rpx;
 				height: 28rpx;

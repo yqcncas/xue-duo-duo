@@ -131,7 +131,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 33));
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/regenerator */ 33));
 
 
 
@@ -168,9 +168,6 @@ var _index = _interopRequireDefault(__webpack_require__(/*! @/config/index.js */
     HomeMain: HomeMain },
 
   onLoad: function onLoad(options) {
-    console.log("******");
-    console.log(options);
-    console.log("******");
     this.initBannerInfo();
     this.initLessonTab();
     if (options.q) {
@@ -216,69 +213,69 @@ var _index = _interopRequireDefault(__webpack_require__(/*! @/config/index.js */
 
     },
     // 初始化轮播图
-    initBannerInfo: function () {var _initBannerInfo = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var _ref, res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
-                  this.$fetch(this.$api.getRotationChart, {}, 'GET'));case 2:_ref = _context.sent;res = _ref.data;
+    initBannerInfo: function initBannerInfo() {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var _yield$_this$$fetch, res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
+                  _this.$fetch(_this.$api.getRotationChart, {}, 'GET'));case 2:_yield$_this$$fetch = _context.sent;res = _yield$_this$$fetch.data;
                 // console.log(res)
-                this.bannerList = res;case 5:case "end":return _context.stop();}}}, _callee, this);}));function initBannerInfo() {return _initBannerInfo.apply(this, arguments);}return initBannerInfo;}(),
-
+                _this.bannerList = res;case 5:case "end":return _context.stop();}}}, _callee);}))();
+    },
     // 初始化课程scrollTab列表
-    initLessonTab: function () {var _initLessonTab = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var _ref2, res, i;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:_context2.next = 2;return (
-                  this.$fetch(this.$api.getCourseType, {}, 'Get'));case 2:_ref2 = _context2.sent;res = _ref2.data;
-                this.scrollTab = res;
-                console.log(this.scrollTab);
-                for (i = 0; i < this.scrollTab.length; i++) {
-                  this.scrollTab[i].childId = 'childId' + i;
-                }
-                this.initLessonList();case 8:case "end":return _context2.stop();}}}, _callee2, this);}));function initLessonTab() {return _initLessonTab.apply(this, arguments);}return initLessonTab;}(),
+    initLessonTab: function initLessonTab() {var _this2 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var _yield$_this2$$fetch, res, i;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:_context2.next = 2;return (
+                  _this2.$fetch(_this2.$api.getCourseType, {}, 'Get'));case 2:_yield$_this2$$fetch = _context2.sent;res = _yield$_this2$$fetch.data;
+                _this2.scrollTab = res;
 
+                for (i = 0; i < _this2.scrollTab.length; i++) {
+                  _this2.scrollTab[i].childId = 'childId' + i;
+                }
+                _this2.initLessonList();case 7:case "end":return _context2.stop();}}}, _callee2);}))();
+    },
     // 初始化课程列表
-    initLessonList: function () {var _initLessonList = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee3() {var classTrueId, res, _res;return _regenerator.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:if (!
+    initLessonList: function initLessonList() {var _this3 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee3() {var classTrueId, res, _res;return _regenerator.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:if (!
                 uni.getStorageSync('classTrueId')) {_context3.next = 9;break;}
                 classTrueId = uni.getStorageSync('classTrueId');_context3.next = 4;return (
-                  this.$fetch(this.$api.getCourseList, { courseTypeId: this.scrollTab[0].dictValue, classTypeId: classTrueId, pageNum: this.pageNum, pageSize: 10 }, 'Get'));case 4:res = _context3.sent;
-                this.LessonList = res.rows;
-                this.LessonList.forEach(function (item) {
+                  _this3.$fetch(_this3.$api.getCourseList, { courseTypeId: _this3.scrollTab[0].dictValue, classTypeId: classTrueId, pageNum: _this3.pageNum, pageSize: 10 }, 'Get'));case 4:res = _context3.sent;
+                _this3.LessonList = res.rows;
+                _this3.LessonList.forEach(function (item) {
                   item.teachers.forEach(function (teachers) {
                     teachers.avatar = _index.default.slice(0, _index.default.length - 1) + teachers.avatar;
                   });
                 });_context3.next = 14;break;case 9:_context3.next = 11;return (
 
-                  this.$fetch(this.$api.getCourseList, { courseTypeId: this.scrollTab[0].dictValue, pageNum: this.pageNum, pageSize: 10 }, 'Get'));case 11:_res = _context3.sent;
-                this.LessonList = _res.rows;
-                this.LessonList.forEach(function (item) {
+                  _this3.$fetch(_this3.$api.getCourseList, { courseTypeId: _this3.scrollTab[0].dictValue, pageNum: _this3.pageNum, pageSize: 10 }, 'Get'));case 11:_res = _context3.sent;
+                _this3.LessonList = _res.rows;
+                _this3.LessonList.forEach(function (item) {
                   item.teachers.forEach(function (teachers) {
                     teachers.avatar = _index.default.slice(0, _index.default.length - 1) + teachers.avatar;
                   });
-                });case 14:case "end":return _context3.stop();}}}, _callee3, this);}));function initLessonList() {return _initLessonList.apply(this, arguments);}return initLessonList;}(),
+                });case 14:case "end":return _context3.stop();}}}, _callee3);}))();
 
 
-
+    },
     // 点击tab切换数据
-    handleCurrentIndex: function () {var _handleCurrentIndex = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee4(index) {var classTrueId, res, _res2;return _regenerator.default.wrap(function _callee4$(_context4) {while (1) {switch (_context4.prev = _context4.next) {case 0:if (!
+    handleCurrentIndex: function handleCurrentIndex(index) {var _this4 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee4() {var classTrueId, res, _res2;return _regenerator.default.wrap(function _callee4$(_context4) {while (1) {switch (_context4.prev = _context4.next) {case 0:if (!
                 uni.getStorageSync('classTrueId')) {_context4.next = 11;break;}
                 classTrueId = uni.getStorageSync('classTrueId');_context4.next = 4;return (
-                  this.$fetch(this.$api.getCourseList, { courseTypeId: this.scrollTab[index].dictValue, classTypeId: classTrueId }, 'Get'));case 4:res = _context4.sent;
+                  _this4.$fetch(_this4.$api.getCourseList, { courseTypeId: _this4.scrollTab[index].dictValue, classTypeId: classTrueId }, 'Get'));case 4:res = _context4.sent;
                 console.log(res);
-                this.LessonList = res.rows;
-                this.LessonList.forEach(function (item) {
+                _this4.LessonList = res.rows;
+                _this4.LessonList.forEach(function (item) {
                   item.teachers.forEach(function (teachers) {
                     teachers.avatar = _index.default.slice(0, _index.default.length - 1) + teachers.avatar;
                   });
                 });
-                console.log(this.LessonList);_context4.next = 17;break;case 11:_context4.next = 13;return (
+                console.log(_this4.LessonList);_context4.next = 17;break;case 11:_context4.next = 13;return (
 
-                  this.$fetch(this.$api.getCourseList, { courseTypeId: this.scrollTab[index].dictValue }, 'Get'));case 13:_res2 = _context4.sent;
-                this.LessonList = _res2.rows;
-                this.LessonList.forEach(function (item) {
+                  _this4.$fetch(_this4.$api.getCourseList, { courseTypeId: _this4.scrollTab[index].dictValue }, 'Get'));case 13:_res2 = _context4.sent;
+                _this4.LessonList = _res2.rows;
+                _this4.LessonList.forEach(function (item) {
                   item.teachers.forEach(function (teachers) {
                     teachers.avatar = _index.default.slice(0, _index.default.length - 1) + teachers.avatar;
                   });
                 });
-                console.log(this.LessonList);case 17:case "end":return _context4.stop();}}}, _callee4, this);}));function handleCurrentIndex(_x) {return _handleCurrentIndex.apply(this, arguments);}return handleCurrentIndex;}(),
+                console.log(_this4.LessonList);case 17:case "end":return _context4.stop();}}}, _callee4);}))();
 
 
 
-
+    },
     // 去课程详情
     goToLessonDetail: function goToLessonDetail(courseId) {
       uni.navigateTo({

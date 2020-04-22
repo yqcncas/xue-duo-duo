@@ -131,7 +131,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 33));
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/regenerator */ 33));
 
 
 
@@ -243,27 +243,27 @@ var _index = _interopRequireDefault(__webpack_require__(/*! ../../config/index.j
       }).exec();
     },
     // 获取发现列表
-    experienceDetail: function () {var _experienceDetail = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var res, _res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:if (!
+    experienceDetail: function experienceDetail() {var _this2 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var res, _res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:if (!
                 uni.getStorageSync('userId')) {_context.next = 12;break;}
-                this.userId = uni.getStorageSync('userId');_context.next = 4;return (
-                  this.$fetch(this.$api.experienceDetail, { id: this.id, userId: this.userId }, 'POST', 'FORM'));case 4:res = _context.sent;
+                _this2.userId = uni.getStorageSync('userId');_context.next = 4;return (
+                  _this2.$fetch(_this2.$api.experienceDetail, { id: _this2.id, userId: _this2.userId }, 'POST', 'FORM'));case 4:res = _context.sent;
                 console.log(res);
                 res.data.pic = res.data.pic.split(',');
-                this.commentMainList = [res.data];
-                this.commentList = this.commentMainList[0].experienceEvaluates;
-                console.log(this.commentMainList);_context.next = 19;break;case 12:_context.next = 14;return (
+                _this2.commentMainList = [res.data];
+                _this2.commentList = _this2.commentMainList[0].experienceEvaluates;
+                console.log(_this2.commentMainList);_context.next = 19;break;case 12:_context.next = 14;return (
 
-                  this.$fetch(this.$api.experienceDetail, { id: this.id }, 'POST', 'FORM'));case 14:_res = _context.sent;
+                  _this2.$fetch(_this2.$api.experienceDetail, { id: _this2.id }, 'POST', 'FORM'));case 14:_res = _context.sent;
                 console.log(_res);
                 // res.data.forEach(item => {
                 // 	item.pic = item.pic.split(',')
                 // })
                 _res.data.pic = _res.data.pic.split(',');
-                this.commentMainList = [_res.data];
-                this.commentList = this.commentMainList[0].experienceEvaluates;case 19:case "end":return _context.stop();}}}, _callee, this);}));function experienceDetail() {return _experienceDetail.apply(this, arguments);}return experienceDetail;}(),
+                _this2.commentMainList = [_res.data];
+                _this2.commentList = _this2.commentMainList[0].experienceEvaluates;case 19:case "end":return _context.stop();}}}, _callee);}))();
 
 
-
+    },
     // 查看图片
     checkImg: function checkImg(id, index) {
       var imgList = this.commentMainList[index].pic;
@@ -273,25 +273,25 @@ var _index = _interopRequireDefault(__webpack_require__(/*! ../../config/index.j
 
     },
     // 发送消息
-    sendMsg: function () {var _sendMsg = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var experienceEvaluate, res, userInfo, createTime, commentInfo, commentTotal;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:if (
-                this.userId) {_context2.next = 2;break;}return _context2.abrupt("return",
+    sendMsg: function sendMsg() {var _this3 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var experienceEvaluate, res, userInfo, createTime, commentInfo, commentTotal;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:if (
+                _this3.userId) {_context2.next = 2;break;}return _context2.abrupt("return",
                 uni.showToast({
                   icon: 'none',
                   title: '请先登录' }));case 2:if (!(
 
 
-                this.sendMsgCommain.trim() == '')) {_context2.next = 4;break;}return _context2.abrupt("return",
+                _this3.sendMsgCommain.trim() == '')) {_context2.next = 4;break;}return _context2.abrupt("return",
                 uni.showToast({
                   icon: 'none',
                   title: '请输入您的评论' }));case 4:
 
 
                 experienceEvaluate = {
-                  content: this.sendMsgCommain,
-                  experienceId: this.commentMainList[0].id };
+                  content: _this3.sendMsgCommain,
+                  experienceId: _this3.commentMainList[0].id };
 
                 experienceEvaluate = JSON.stringify(experienceEvaluate);_context2.next = 8;return (
-                  this.$fetch(this.$api.addExperienceEvaluate, { content: this.sendMsgCommain, experienceId: this.commentMainList[0].id }));case 8:res = _context2.sent;
+                  _this3.$fetch(_this3.$api.addExperienceEvaluate, { content: _this3.sendMsgCommain, experienceId: _this3.commentMainList[0].id }));case 8:res = _context2.sent;
                 console.log(res);
                 uni.showToast({
                   icon: 'none',
@@ -300,27 +300,27 @@ var _index = _interopRequireDefault(__webpack_require__(/*! ../../config/index.j
 
                 if (!res.code) {
                   userInfo = uni.getStorageSync('userInfo');
-                  createTime = this.$dayjs().format('YYYY-MM-DD HH:mm:ss');
+                  createTime = _this3.$dayjs().format('YYYY-MM-DD HH:mm:ss');
                   commentInfo = {
                     avatar: userInfo.userAvatar,
                     createTime: createTime,
                     userName: userInfo.userName,
-                    content: this.sendMsgCommain };
+                    content: _this3.sendMsgCommain };
 
-                  this.commentList.unshift(commentInfo);
-                  this.sendMsgCommain = "";
+                  _this3.commentList.unshift(commentInfo);
+                  _this3.sendMsgCommain = "";
 
-                  this.commentTotal++;
+                  _this3.commentTotal++;
                   commentTotal = {
-                    id: this.commentMainList[0].id,
-                    total: this.commentTotal };
+                    id: _this3.commentMainList[0].id,
+                    total: _this3.commentTotal };
 
                   uni.setStorageSync('commentTotal', commentTotal);
-                }case 12:case "end":return _context2.stop();}}}, _callee2, this);}));function sendMsg() {return _sendMsg.apply(this, arguments);}return sendMsg;}(),
-
+                }case 12:case "end":return _context2.stop();}}}, _callee2);}))();
+    },
     // 点赞
-    collectMessage: function () {var _collectMessage = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee3(item) {var res, praiseFlag;return _regenerator.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:if (
-                this.userId) {_context3.next = 2;break;}return _context3.abrupt("return",
+    collectMessage: function collectMessage(item) {var _this4 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee3() {var res, praiseFlag;return _regenerator.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:if (
+                _this4.userId) {_context3.next = 2;break;}return _context3.abrupt("return",
                 uni.showToast({
                   icon: 'none',
                   title: '请先登录' }));case 2:
@@ -334,13 +334,13 @@ var _index = _interopRequireDefault(__webpack_require__(/*! ../../config/index.j
                 item.params.praiseFlag = !item.params.praiseFlag;
                 console.log(item.params.praiseFlag);_context3.next = 7;return (
 
-                  this.$fetch(this.$api.updPraisePoints, { id: item.id, userId: this.userId }, 'POST', 'FORM'));case 7:res = _context3.sent;
+                  _this4.$fetch(_this4.$api.updPraisePoints, { id: item.id, userId: _this4.userId }, 'POST', 'FORM'));case 7:res = _context3.sent;
                 praiseFlag = {
                   id: item.id,
                   collectFlag: item.params.praiseFlag };
 
-                uni.setStorageSync('praiseFlag', praiseFlag);case 10:case "end":return _context3.stop();}}}, _callee3, this);}));function collectMessage(_x) {return _collectMessage.apply(this, arguments);}return collectMessage;}() },
-
+                uni.setStorageSync('praiseFlag', praiseFlag);case 10:case "end":return _context3.stop();}}}, _callee3);}))();
+    } },
 
 
   onShow: function onShow() {

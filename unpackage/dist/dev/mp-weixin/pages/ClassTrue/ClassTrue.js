@@ -131,7 +131,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 33));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};} //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/regenerator */ 33));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};} //
 //
 //
 //
@@ -166,38 +166,38 @@ var _default =
       this.className = item;
     },
     // 确定修改年级
-    handleConfirmGrade: function () {var _handleConfirmGrade = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var classTrue, res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:
+    handleConfirmGrade: function handleConfirmGrade() {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var classTrue, res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:
                 classTrue = {
-                  id: this.selectGrade,
-                  name: this.className };
+                  id: _this.selectGrade,
+                  name: _this.className };
 
                 uni.setStorageSync('classTrue', JSON.stringify(classTrue));
-                uni.setStorageSync('classTrueId', this.selectGrade);_context.next = 5;return (
-                  this.$fetch(this.$api.editUserInfo, { classTypeId: this.selectGrade }, 'POST', "FORM"));case 5:res = _context.sent;if (!
+                uni.setStorageSync('classTrueId', _this.selectGrade);_context.next = 5;return (
+                  _this.$fetch(_this.$api.editUserInfo, { classTypeId: _this.selectGrade }, 'POST', "FORM"));case 5:res = _context.sent;if (!
 
                 res.code) {_context.next = 8;break;}return _context.abrupt("return", uni.showToast({ title: res.msg, icon: 'none' }));case 8:
                 // let userInfo = uni.getStorageSync('user_info')
                 // userInfo.classTypeId = this.selectGrade
                 // uni.setStorageSync('user_info', userInfo)
-                if (this.infoOrindex == 1) {
+                if (_this.infoOrindex == 1) {
                   uni.setStorageSync('classBackFresh', true);
                   uni.navigateBack({
                     delta: 1 });
 
                 } else {
                   uni.reLaunch({ url: '/pages/index/index' });
-                }case 9:case "end":return _context.stop();}}}, _callee, this);}));function handleConfirmGrade() {return _handleConfirmGrade.apply(this, arguments);}return handleConfirmGrade;}(),
+                }case 9:case "end":return _context.stop();}}}, _callee);}))();
 
-
-    initClassTrueInfo: function () {var _initClassTrueInfo = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var res;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:_context2.next = 2;return (
-                  this.$fetch(this.$api.getClassType, {}, 'GET'));case 2:res = _context2.sent;
+    },
+    initClassTrueInfo: function initClassTrueInfo() {var _this2 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var res;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:_context2.next = 2;return (
+                  _this2.$fetch(_this2.$api.getClassType, {}, 'GET'));case 2:res = _context2.sent;
                 console.log(res);if (!(
                 res.code !== 0)) {_context2.next = 6;break;}return _context2.abrupt("return", uni.showToast({
                   icon: 'none',
                   title: '请求失败' }));case 6:
 
-                this.gradeTree = res.data;case 7:case "end":return _context2.stop();}}}, _callee2, this);}));function initClassTrueInfo() {return _initClassTrueInfo.apply(this, arguments);}return initClassTrueInfo;}() },
-
+                _this2.gradeTree = res.data;case 7:case "end":return _context2.stop();}}}, _callee2);}))();
+    } },
 
   onLoad: function onLoad(options) {
     this.infoOrindex = options.infoOrIndex;

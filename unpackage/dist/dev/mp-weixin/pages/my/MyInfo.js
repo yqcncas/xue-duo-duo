@@ -136,7 +136,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 33));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var mpvueCityPicker = function mpvueCityPicker() {Promise.all(/*! require.ensure | components/city-picker/mpvueCityPicker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/city-picker/mpvueCityPicker")]).then((function () {return resolve(__webpack_require__(/*! @/components/city-picker/mpvueCityPicker.vue */ 342));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/regenerator */ 33));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var mpvueCityPicker = function mpvueCityPicker() {Promise.all(/*! require.ensure | components/city-picker/mpvueCityPicker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/city-picker/mpvueCityPicker")]).then((function () {return resolve(__webpack_require__(/*! @/components/city-picker/mpvueCityPicker.vue */ 342));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
@@ -222,72 +222,72 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     // 获取用户信息
-    getUserInfo: function () {var _getUserInfo = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
-                  this.$fetch(this.$api.userInfo, {}, 'GET'));case 2:res = _context.sent;if (!
+    getUserInfo: function getUserInfo() {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
+                  _this.$fetch(_this.$api.userInfo, {}, 'GET'));case 2:res = _context.sent;if (!
                 res.code) {_context.next = 5;break;}return _context.abrupt("return", uni.showToast({ title: res.msg, icon: 'none' }));case 5:
-                this.userInfo = res.data;
-                this.userName = res.data.userName;
-                this.userNameTwo = res.data.userName; // 备用
-                this.scroll = res.data.school;
-                this.scrollTwo = res.data.school; // 备用
+                _this.userInfo = res.data;
+                _this.userName = res.data.userName;
+                _this.userNameTwo = res.data.userName; // 备用
+                _this.scroll = res.data.school;
+                _this.scrollTwo = res.data.school; // 备用
                 if (res.data.classTypeId) {
-                  this.MyClass = res.data.classType.name;
-                }case 11:case "end":return _context.stop();}}}, _callee, this);}));function getUserInfo() {return _getUserInfo.apply(this, arguments);}return getUserInfo;}(),
-
+                  _this.MyClass = res.data.classType.name;
+                }case 11:case "end":return _context.stop();}}}, _callee);}))();
+    },
     // 修改用户昵称
-    handleUserName: function () {var _handleUserName = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var res;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:if (!(
-                this.userName.trim() == '')) {_context2.next = 4;break;}
+    handleUserName: function handleUserName() {var _this2 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var res;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:if (!(
+                _this2.userName.trim() == '')) {_context2.next = 4;break;}
                 uni.showToast({
                   icon: 'none',
                   title: '请输入正确的用户昵称' });
 
-                this.userName = this.userNameTwo;return _context2.abrupt("return");case 4:_context2.next = 6;return (
+                _this2.userName = _this2.userNameTwo;return _context2.abrupt("return");case 4:_context2.next = 6;return (
 
 
-                  this.$fetch(this.$api.editUserInfo, { userName: this.userName }, 'POST', 'FORM'));case 6:res = _context2.sent;
+                  _this2.$fetch(_this2.$api.editUserInfo, { userName: _this2.userName }, 'POST', 'FORM'));case 6:res = _context2.sent;
                 uni.showToast({
                   icon: 'none',
-                  title: res.msg });case 8:case "end":return _context2.stop();}}}, _callee2, this);}));function handleUserName() {return _handleUserName.apply(this, arguments);}return handleUserName;}(),
+                  title: res.msg });case 8:case "end":return _context2.stop();}}}, _callee2);}))();
 
-
-    handleScroll: function () {var _handleScroll = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee3() {var res;return _regenerator.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:if (!(
-                this.scroll.trim() == '')) {_context3.next = 4;break;}
+    },
+    handleScroll: function handleScroll() {var _this3 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee3() {var res;return _regenerator.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:if (!(
+                _this3.scroll.trim() == '')) {_context3.next = 4;break;}
                 uni.showToast({
                   icon: 'none',
                   title: '请输入正确的学校名称' });
 
-                this.scroll = this.scrollTwo;return _context3.abrupt("return");case 4:_context3.next = 6;return (
+                _this3.scroll = _this3.scrollTwo;return _context3.abrupt("return");case 4:_context3.next = 6;return (
 
 
-                  this.$fetch(this.$api.editUserInfo, { school: this.scroll }, 'POST', 'FORM'));case 6:res = _context3.sent;
+                  _this3.$fetch(_this3.$api.editUserInfo, { school: _this3.scroll }, 'POST', 'FORM'));case 6:res = _context3.sent;
                 uni.showToast({
                   icon: 'none',
-                  title: res.msg });case 8:case "end":return _context3.stop();}}}, _callee3, this);}));function handleScroll() {return _handleScroll.apply(this, arguments);}return handleScroll;}(),
+                  title: res.msg });case 8:case "end":return _context3.stop();}}}, _callee3);}))();
 
-
+    },
     // 修改用户性别
-    handleSexChange: function () {var _handleSexChange = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee4(_ref) {var value, res;return _regenerator.default.wrap(function _callee4$(_context4) {while (1) {switch (_context4.prev = _context4.next) {case 0:value = _ref.detail.value;_context4.next = 3;return (
-                  this.$fetch(this.$api.editUserInfo, { sex: value }, 'POST', 'FORM'));case 3:res = _context4.sent;
-                this.userInfo.sex = this.sexList[parseInt(value)].id;case 5:case "end":return _context4.stop();}}}, _callee4, this);}));function handleSexChange(_x) {return _handleSexChange.apply(this, arguments);}return handleSexChange;}(),
-
+    handleSexChange: function handleSexChange(_ref) {var _this4 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee4() {var value, res;return _regenerator.default.wrap(function _callee4$(_context4) {while (1) {switch (_context4.prev = _context4.next) {case 0:value = _ref.detail.value;_context4.next = 3;return (
+                  _this4.$fetch(_this4.$api.editUserInfo, { sex: value }, 'POST', 'FORM'));case 3:res = _context4.sent;
+                _this4.userInfo.sex = _this4.sexList[parseInt(value)].id;case 5:case "end":return _context4.stop();}}}, _callee4);}))();
+    },
     // 修改用户头像
-    handleEditAvatar: function handleEditAvatar() {var _this = this;
+    handleEditAvatar: function handleEditAvatar() {var _this5 = this;
       uni.chooseImage({
         count: 1,
         success: function success(res) {
           if (res.tempFilePaths) {
             uni.uploadFile({
-              url: _this.$api.unloadLocation, //仅为示例，非真实的接口地址
+              url: _this5.$api.unloadLocation, //仅为示例，非真实的接口地址
               filePath: res.tempFilePaths[0],
               name: 'file',
               formData: {
-                token: _this.token },
+                token: _this5.token },
 
               success: function success(_ref2) {var data = _ref2.data;
                 data = JSON.parse(data);
-                _this.$fetch(_this.$api.editUserInfo, { avatar: _this.$api.baseLocation + data.hash }, 'POST', 'FORM').then(function (avatarRes) {
+                _this5.$fetch(_this5.$api.editUserInfo, { avatar: _this5.$api.baseLocation + data.hash }, 'POST', 'FORM').then(function (avatarRes) {
                   if (avatarRes.code) return uni.showToast({ title: res.msg, icon: 'none' });
-                  _this.userInfo.avatar = _this.$api.baseLocation + data.hash;
+                  _this5.userInfo.avatar = _this5.$api.baseLocation + data.hash;
                 });
               } });
 
@@ -296,24 +296,24 @@ __webpack_require__.r(__webpack_exports__);
 
     },
     // 修改生日
-    handleEditBirthday: function () {var _handleEditBirthday = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee5(_ref3) {var value, res;return _regenerator.default.wrap(function _callee5$(_context5) {while (1) {switch (_context5.prev = _context5.next) {case 0:value = _ref3.detail.value;
-                this.userInfo.birthday = value;_context5.next = 4;return (
-                  this.$fetch(this.$api.editUserInfo, { birthday: value }, 'POST', 'FORM'));case 4:res = _context5.sent;if (!
+    handleEditBirthday: function handleEditBirthday(_ref3) {var _this6 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee5() {var value, res;return _regenerator.default.wrap(function _callee5$(_context5) {while (1) {switch (_context5.prev = _context5.next) {case 0:value = _ref3.detail.value;
+                _this6.userInfo.birthday = value;_context5.next = 4;return (
+                  _this6.$fetch(_this6.$api.editUserInfo, { birthday: value }, 'POST', 'FORM'));case 4:res = _context5.sent;if (!
                 res.code) {_context5.next = 7;break;}return _context5.abrupt("return", uni.showToast({ title: res.msg, icon: 'none' }));case 7:return _context5.abrupt("return",
-                uni.showToast({ title: '生日修改成功！', icon: 'none' }));case 8:case "end":return _context5.stop();}}}, _callee5, this);}));function handleEditBirthday(_x2) {return _handleEditBirthday.apply(this, arguments);}return handleEditBirthday;}(),
-
+                uni.showToast({ title: '生日修改成功！', icon: 'none' }));case 8:case "end":return _context5.stop();}}}, _callee5);}))();
+    },
     // 获取七牛token
-    uptoken: function () {var _uptoken = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee6() {var res;return _regenerator.default.wrap(function _callee6$(_context6) {while (1) {switch (_context6.prev = _context6.next) {case 0:_context6.next = 2;return (
-                  this.$fetch(this.$api.uptoken, {}, 'GET'));case 2:res = _context6.sent;
-                this.token = res.data;case 4:case "end":return _context6.stop();}}}, _callee6, this);}));function uptoken() {return _uptoken.apply(this, arguments);}return uptoken;}(),
-
+    uptoken: function uptoken() {var _this7 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee6() {var res;return _regenerator.default.wrap(function _callee6$(_context6) {while (1) {switch (_context6.prev = _context6.next) {case 0:_context6.next = 2;return (
+                  _this7.$fetch(_this7.$api.uptoken, {}, 'GET'));case 2:res = _context6.sent;
+                _this7.token = res.data;case 4:case "end":return _context6.stop();}}}, _callee6);}))();
+    },
     // 修改地区
-    handleConfirmCity: function () {var _handleConfirmCity = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee7(e) {var res;return _regenerator.default.wrap(function _callee7$(_context7) {while (1) {switch (_context7.prev = _context7.next) {case 0:
-                this.showPicker = false;_context7.next = 3;return (
-                  this.$fetch(this.$api.editUserInfo, { provinceString: e.label.replace(/-/g, ''), province: e.cityCode }, 'POST', 'FORM'));case 3:res = _context7.sent;if (!
+    handleConfirmCity: function handleConfirmCity(e) {var _this8 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee7() {var res;return _regenerator.default.wrap(function _callee7$(_context7) {while (1) {switch (_context7.prev = _context7.next) {case 0:
+                _this8.showPicker = false;_context7.next = 3;return (
+                  _this8.$fetch(_this8.$api.editUserInfo, { provinceString: e.label.replace(/-/g, ''), province: e.cityCode }, 'POST', 'FORM'));case 3:res = _context7.sent;if (!
                 res.code) {_context7.next = 6;break;}return _context7.abrupt("return", uni.showToast({ title: res.msg, icon: 'none' }));case 6:
-                this.userInfo.provinceString = e.label.replace(/-/g, '');case 7:case "end":return _context7.stop();}}}, _callee7, this);}));function handleConfirmCity(_x3) {return _handleConfirmCity.apply(this, arguments);}return handleConfirmCity;}(),
-
+                _this8.userInfo.provinceString = e.label.replace(/-/g, '');case 7:case "end":return _context7.stop();}}}, _callee7);}))();
+    },
     // 关闭地区选择器
     handleCancelCity: function handleCancelCity() {
       this.showPicker = false;

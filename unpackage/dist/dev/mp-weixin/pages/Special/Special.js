@@ -94,8 +94,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components = {
-  "uni-load-more": () =>
-    __webpack_require__.e(/*! import() | components/uni-load-more/uni-load-more */ "components/uni-load-more/uni-load-more").then(__webpack_require__.bind(null, /*! @/components/uni-load-more/uni-load-more.vue */ 277))
+  "uni-load-more": function() {
+    return __webpack_require__.e(/*! import() | components/uni-load-more/uni-load-more */ "components/uni-load-more/uni-load-more").then(__webpack_require__.bind(null, /*! @/components/uni-load-more/uni-load-more.vue */ 277))
+  }
 }
 var render = function() {
   var _vm = this
@@ -134,7 +135,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 33));
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/regenerator */ 33));
 
 
 
@@ -217,7 +218,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _index = _interopRequireDefault(__webpack_require__(/*! @/config/index.js */ 16));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance");}function _iterableToArray(iter) {if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) {for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {arr2[i] = arr[i];}return arr2;}}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var uniLoadMore = function uniLoadMore() {__webpack_require__.e(/*! require.ensure | components/uni-load-more/uni-load-more */ "components/uni-load-more/uni-load-more").then((function () {return resolve(__webpack_require__(/*! ../../components/uni-load-more/uni-load-more.vue */ 277));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var HomeMainList = function HomeMainList() {__webpack_require__.e(/*! require.ensure | components/Home/HomeMainList */ "components/Home/HomeMainList").then((function () {return resolve(__webpack_require__(/*! ../../components/Home/HomeMainList.vue */ 309));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+var _index = _interopRequireDefault(__webpack_require__(/*! @/config/index.js */ 16));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(n);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var uniLoadMore = function uniLoadMore() {__webpack_require__.e(/*! require.ensure | components/uni-load-more/uni-load-more */ "components/uni-load-more/uni-load-more").then((function () {return resolve(__webpack_require__(/*! ../../components/uni-load-more/uni-load-more.vue */ 277));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var HomeMainList = function HomeMainList() {__webpack_require__.e(/*! require.ensure | components/Home/HomeMainList */ "components/Home/HomeMainList").then((function () {return resolve(__webpack_require__(/*! ../../components/Home/HomeMainList.vue */ 309));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 {
@@ -255,64 +256,64 @@ var _index = _interopRequireDefault(__webpack_require__(/*! @/config/index.js */
       this.LessonList = [];
       this.initSpcecialList();
     },
-    handleTimerIndex: function () {var _handleTimerIndex = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:
-                this.timerIndex++;
-                this.pageNum = 0;
-                this.hasFlag = true;
-                this.LessonList = [];
-                if (this.timerIndex > 2) {
-                  this.timerIndex = 0;
+    handleTimerIndex: function handleTimerIndex() {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:
+                _this.timerIndex++;
+                _this.pageNum = 0;
+                _this.hasFlag = true;
+                _this.LessonList = [];
+                if (_this.timerIndex > 2) {
+                  _this.timerIndex = 0;
                 }
-                if (this.timerIndex == 1) {
-                  this.orderBy = 'asc';
+                if (_this.timerIndex == 1) {
+                  _this.orderBy = 'asc';
                 } else {
-                  this.orderBy = "desc";
+                  _this.orderBy = "desc";
                 }
-                if (this.timerIndex == 0) {
-                  this.orderBy = 'asc';
+                if (_this.timerIndex == 0) {
+                  _this.orderBy = 'asc';
                 }
-                this.initSpcecialList();case 8:case "end":return _context.stop();}}}, _callee, this);}));function handleTimerIndex() {return _handleTimerIndex.apply(this, arguments);}return handleTimerIndex;}(),
+                _this.initSpcecialList();case 8:case "end":return _context.stop();}}}, _callee);}))();
 
-
+    },
     // 初始化列表
-    initSpcecialList: function () {var _initSpcecialList = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var res, _res;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:if (
+    initSpcecialList: function initSpcecialList() {var _this2 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var res, _res;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:if (
 
-                this.lessonPickerId) {_context2.next = 12;break;}if (
-                this.hasFlag) {_context2.next = 3;break;}return _context2.abrupt("return");case 3:
-                this.pageNum = ++this.pageNum;_context2.next = 6;return (
-                  this.$fetch(this.$api.getCourseList, { isAssemble: 0, isAsc: this.orderBy, orderByColumn: 'courseId', pageSize: 10, pageNum: this.pageNum }, 'GET', 'FORM'));case 6:res = _context2.sent;
-                this.LessonList = [].concat(_toConsumableArray(this.LessonList), _toConsumableArray(res.rows));
-                this.LessonList.forEach(function (item) {
+                _this2.lessonPickerId) {_context2.next = 12;break;}if (
+                _this2.hasFlag) {_context2.next = 3;break;}return _context2.abrupt("return");case 3:
+                _this2.pageNum = ++_this2.pageNum;_context2.next = 6;return (
+                  _this2.$fetch(_this2.$api.getCourseList, { isAssemble: 0, isAsc: _this2.orderBy, orderByColumn: 'courseId', pageSize: 10, pageNum: _this2.pageNum }, 'GET', 'FORM'));case 6:res = _context2.sent;
+                _this2.LessonList = [].concat(_toConsumableArray(_this2.LessonList), _toConsumableArray(res.rows));
+                _this2.LessonList.forEach(function (item) {
                   item.teachers.forEach(function (teachers) {
                     teachers.avatar = _index.default.slice(0, _index.default.length - 1) + teachers.avatar;
                   });
                 });
-                this.hasFlag = this.pageNum * 10 < res.total;_context2.next = 22;break;case 12:
+                _this2.hasFlag = _this2.pageNum * 10 < res.total;_context2.next = 22;break;case 12:
 
                 // 选择学科后的列表
-                console.log(this.lessonPickerId);if (
-                this.hasFlag) {_context2.next = 15;break;}return _context2.abrupt("return");case 15:
-                this.pageNum = ++this.pageNum;_context2.next = 18;return (
-                  this.$fetch(this.$api.getCourseList, { isAssemble: 0, courseTypeId: this.lessonPickerId, isAsc: this.orderBy, orderByColumn: 'courseId', pageSize: 10, pageNum: this.pageNum }, 'GET', 'FORM'));case 18:_res = _context2.sent;
-                this.LessonList = [].concat(_toConsumableArray(this.LessonList), _toConsumableArray(_res.rows));
-                this.LessonList.forEach(function (item) {
+                console.log(_this2.lessonPickerId);if (
+                _this2.hasFlag) {_context2.next = 15;break;}return _context2.abrupt("return");case 15:
+                _this2.pageNum = ++_this2.pageNum;_context2.next = 18;return (
+                  _this2.$fetch(_this2.$api.getCourseList, { isAssemble: 0, courseTypeId: _this2.lessonPickerId, isAsc: _this2.orderBy, orderByColumn: 'courseId', pageSize: 10, pageNum: _this2.pageNum }, 'GET', 'FORM'));case 18:_res = _context2.sent;
+                _this2.LessonList = [].concat(_toConsumableArray(_this2.LessonList), _toConsumableArray(_res.rows));
+                _this2.LessonList.forEach(function (item) {
                   item.teachers.forEach(function (teachers) {
                     teachers.avatar = _index.default.slice(0, _index.default.length - 1) + teachers.avatar;
                   });
                 });
-                this.hasFlag = this.pageNum * 10 < _res.total;case 22:case "end":return _context2.stop();}}}, _callee2, this);}));function initSpcecialList() {return _initSpcecialList.apply(this, arguments);}return initSpcecialList;}(),
+                _this2.hasFlag = _this2.pageNum * 10 < _res.total;case 22:case "end":return _context2.stop();}}}, _callee2);}))();
 
 
-
+    },
     // 初始化学科
-    initLessonTab: function () {var _initLessonTab = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee3() {var _ref, res, i;return _regenerator.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:_context3.next = 2;return (
-                  this.$fetch(this.$api.getCourseType, {}, 'Get'));case 2:_ref = _context3.sent;res = _ref.data;
-                this.lessonList = res;
-                for (i = 0; i < this.lessonList.length; i++) {
-                  this.lessonSelsect.push(this.lessonList[i].dictLabel);
-                  this.lessonSelsectId.push(this.lessonList[i].dictValue);
-                }case 6:case "end":return _context3.stop();}}}, _callee3, this);}));function initLessonTab() {return _initLessonTab.apply(this, arguments);}return initLessonTab;}(),
-
+    initLessonTab: function initLessonTab() {var _this3 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee3() {var _yield$_this3$$fetch, res, i;return _regenerator.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:_context3.next = 2;return (
+                  _this3.$fetch(_this3.$api.getCourseType, {}, 'Get'));case 2:_yield$_this3$$fetch = _context3.sent;res = _yield$_this3$$fetch.data;
+                _this3.lessonList = res;
+                for (i = 0; i < _this3.lessonList.length; i++) {
+                  _this3.lessonSelsect.push(_this3.lessonList[i].dictLabel);
+                  _this3.lessonSelsectId.push(_this3.lessonList[i].dictValue);
+                }case 6:case "end":return _context3.stop();}}}, _callee3);}))();
+    },
     // 去课程详情
     goToLessonDetail: function goToLessonDetail(courseId) {
       uni.navigateTo({

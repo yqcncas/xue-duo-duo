@@ -94,8 +94,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components = {
-  "uni-load-more": () =>
-    __webpack_require__.e(/*! import() | components/uni-load-more/uni-load-more */ "components/uni-load-more/uni-load-more").then(__webpack_require__.bind(null, /*! @/components/uni-load-more/uni-load-more.vue */ 277))
+  "uni-load-more": function() {
+    return __webpack_require__.e(/*! import() | components/uni-load-more/uni-load-more */ "components/uni-load-more/uni-load-more").then(__webpack_require__.bind(null, /*! @/components/uni-load-more/uni-load-more.vue */ 277))
+  }
 }
 var render = function() {
   var _vm = this
@@ -134,7 +135,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 33));
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/regenerator */ 33));
 
 
 
@@ -203,11 +204,11 @@ var _index = _interopRequireDefault(__webpack_require__(/*! ../../config/index.j
 
     },
     // 获取发现列表
-    getFindList: function () {var _getFindList = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:if (
+    getFindList: function getFindList() {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:if (
 
-                this.hasFlag) {_context.next = 2;break;}return _context.abrupt("return");case 2: // 说明已经没有更多
-                this.pageNum = ++this.pageNum;_context.next = 5;return (
-                  this.$fetch(this.$api.experienceList, { pageNum: this.pageNum, pageSize: 10, userId: this.userId }, 'POST', 'form'));case 5:res = _context.sent;
+                _this.hasFlag) {_context.next = 2;break;}return _context.abrupt("return");case 2: // 说明已经没有更多
+                _this.pageNum = ++_this.pageNum;_context.next = 5;return (
+                  _this.$fetch(_this.$api.experienceList, { pageNum: _this.pageNum, pageSize: 10, userId: _this.userId }, 'POST', 'form'));case 5:res = _context.sent;
                 // res.rows.forEach(item =>{
                 // 	item.picContent = JSON.parse(item.picContent)
                 // 	for(let i in item.picContent){
@@ -222,11 +223,11 @@ var _index = _interopRequireDefault(__webpack_require__(/*! ../../config/index.j
                   console.log(item.params.praiseFlag);
                 });
                 console.log(res);
-                this.findList = res.data;
-                console.log(this.findList);
+                _this.findList = res.data;
+                console.log(_this.findList);
                 // this.findList.push(...res.rows)
-                this.hasFlag = 10 * this.pageNum < res.total;case 11:case "end":return _context.stop();}}}, _callee, this);}));function getFindList() {return _getFindList.apply(this, arguments);}return getFindList;}(),
-
+                _this.hasFlag = 10 * _this.pageNum < res.total;case 11:case "end":return _context.stop();}}}, _callee);}))();
+    },
     // 查看图片
     checkImg: function checkImg(id, index) {
       console.log(id, index);
@@ -249,8 +250,8 @@ var _index = _interopRequireDefault(__webpack_require__(/*! ../../config/index.j
 
     },
     // 收藏
-    myCollection: function () {var _myCollection = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2(item, index) {var res;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:if (
-                this.userId) {_context2.next = 2;break;}return _context2.abrupt("return",
+    myCollection: function myCollection(item, index) {var _this2 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var res;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:if (
+                _this2.userId) {_context2.next = 2;break;}return _context2.abrupt("return",
                 uni.showToast({
                   icon: 'none',
                   title: '请先登录' }));case 2:
@@ -263,10 +264,10 @@ var _index = _interopRequireDefault(__webpack_require__(/*! ../../config/index.j
                   item.praisePoints++;
                 }
                 item.params.praiseFlag = !item.params.praiseFlag;_context2.next = 7;return (
-                  this.$fetch(this.$api.updPraisePoints, { id: item.id, userId: this.userId }, 'POST', 'FORM'));case 7:res = _context2.sent;case 8:case "end":return _context2.stop();}}}, _callee2, this);}));function myCollection(_x, _x2) {return _myCollection.apply(this, arguments);}return myCollection;}(),
-
+                  _this2.$fetch(_this2.$api.updPraisePoints, { id: item.id, userId: _this2.userId }, 'POST', 'FORM'));case 7:res = _context2.sent;case 8:case "end":return _context2.stop();}}}, _callee2);}))();
+    },
     // 删除
-    deleteInfo: function deleteInfo(item, index) {var _this = this;
+    deleteInfo: function deleteInfo(item, index) {var _this3 = this;
       console.log(item);
       console.log(index);
       uni.showModal({
@@ -274,21 +275,21 @@ var _index = _interopRequireDefault(__webpack_require__(/*! ../../config/index.j
         content: '确定删除该条心得么?',
         success: function () {var _success = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee3(res) {var _res, i;return _regenerator.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:if (!
                     res.confirm) {_context3.next = 8;break;}_context3.next = 3;return (
-                      _this.$fetch(_this.$api.delExperience, { id: item.id }, 'POST', 'FORM'));case 3:_res = _context3.sent;
+                      _this3.$fetch(_this3.$api.delExperience, { id: item.id }, 'POST', 'FORM'));case 3:_res = _context3.sent;
                     uni.showToast({
                       icon: 'none',
                       title: _res.msg });
 
                     if (!_res.code) {
-                      for (i = 0; i < _this.findList.length; i++) {
-                        if (_this.findList[i].id == item.id) {
-                          _this.findList.splice(i, 1);
+                      for (i = 0; i < _this3.findList.length; i++) {
+                        if (_this3.findList[i].id == item.id) {
+                          _this3.findList.splice(i, 1);
                         }
                       }
                     }_context3.next = 9;break;case 8:
                     if (res.cancel) {
                       console.log('用户点击取消');
-                    }case 9:case "end":return _context3.stop();}}}, _callee3);}));function success(_x3) {return _success.apply(this, arguments);}return success;}() });
+                    }case 9:case "end":return _context3.stop();}}}, _callee3);}));function success(_x) {return _success.apply(this, arguments);}return success;}() });
 
 
 
@@ -299,13 +300,13 @@ var _index = _interopRequireDefault(__webpack_require__(/*! ../../config/index.j
       this.getFindList();
     }
   },
-  onPullDownRefresh: function onPullDownRefresh() {var _this2 = this;
+  onPullDownRefresh: function onPullDownRefresh() {var _this4 = this;
     this.pageNum = 1;
     this.hasFlag = true;
     this.findList = [];
     uni.stopPullDownRefresh();
     setTimeout(function () {
-      _this2.getFindList();
+      _this4.getFindList();
     }, 500);
   },
   onShow: function onShow() {

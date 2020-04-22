@@ -13,6 +13,33 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*每个页面公共css */
 /* 顶部阴影 */
 page::after {
@@ -60,5 +87,15 @@ swiper .a-swiper-dot.a-swiper-dot-active,
 swiper .uni-swiper-dot.uni-swiper-dot-active {
 	opacity: 1;
 	background: #FE5E50;
+}
+::-webkit-scrollbar {
+	display: none;  
+	width: 0 !important;  
+	height: 0 !important;  
+	-webkit-appearance: none;  
+	background: transparent;
+}
+.ip-center{
+	text-align: center;
 }
 

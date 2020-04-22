@@ -98,10 +98,13 @@
 		box-sizing: border-box;
 		background-color: #fff;
 		.swiper-item{
-			width: 690rpx;
-			height: 270rpx;
+			// width: 690rpx;
+			// height: 270rpx;
+			width: 100%;
+			height: 100%;
 			image{
 				width: 100%;
+				height: 100%;
 			}
 		}
 		.homeBanner-item-box{

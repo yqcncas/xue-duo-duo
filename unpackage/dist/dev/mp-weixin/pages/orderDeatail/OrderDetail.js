@@ -96,8 +96,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components = {
-  "uni-popup": () =>
-    __webpack_require__.e(/*! import() | components/uni-popup/uni-popup */ "components/uni-popup/uni-popup").then(__webpack_require__.bind(null, /*! @/components/uni-popup/uni-popup.vue */ 316))
+  "uni-popup": function() {
+    return __webpack_require__.e(/*! import() | components/uni-popup/uni-popup */ "components/uni-popup/uni-popup").then(__webpack_require__.bind(null, /*! @/components/uni-popup/uni-popup.vue */ 316))
+  }
 }
 var render = function() {
   var _vm = this
@@ -136,7 +137,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 33));
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/regenerator */ 33));
 
 
 
@@ -267,38 +268,38 @@ var _index = _interopRequireDefault(__webpack_require__(/*! @/config/index.js */
 
     },
     // 获取个人信息 拿到学币余额
-    initUserInfo: function () {var _initUserInfo = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var _ref, res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
-                  this.$fetch(this.$api.userInfo, {}, 'GET', 'form'));case 2:_ref = _context.sent;res = _ref.data;
-                this.myEduPrice = Number(res.money);
-                console.log(this.myEduPrice);case 6:case "end":return _context.stop();}}}, _callee, this);}));function initUserInfo() {return _initUserInfo.apply(this, arguments);}return initUserInfo;}(),
-
+    initUserInfo: function initUserInfo() {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var _yield$_this$$fetch, res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
+                  _this.$fetch(_this.$api.userInfo, {}, 'GET', 'form'));case 2:_yield$_this$$fetch = _context.sent;res = _yield$_this$$fetch.data;
+                _this.myEduPrice = Number(res.money);
+                console.log(_this.myEduPrice);case 6:case "end":return _context.stop();}}}, _callee);}))();
+    },
     // 获取订单详情
-    getOrderDetail: function () {var _getOrderDetail = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var _this = this;var res;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:_context2.next = 2;return (
-                  this.$fetch(this.$api.orderInfo, { orderId: this.orderId }, 'GET'));case 2:res = _context2.sent;
-                if (this.computedTotalPriceFlag) {
+    getOrderDetail: function getOrderDetail() {var _this2 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var res;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:_context2.next = 2;return (
+                  _this2.$fetch(_this2.$api.orderInfo, { orderId: _this2.orderId }, 'GET'));case 2:res = _context2.sent;
+                if (_this2.computedTotalPriceFlag) {
                   res.data.orderItems.forEach(function (item) {
-                    _this.totalPrice += item.course.price;
+                    _this2.totalPrice += item.course.price;
                   });
                 }
 
-                this.showContainer = true;
-                this.orderDetail = res.data;case 6:case "end":return _context2.stop();}}}, _callee2, this);}));function getOrderDetail() {return _getOrderDetail.apply(this, arguments);}return getOrderDetail;}(),
-
+                _this2.showContainer = true;
+                _this2.orderDetail = res.data;case 6:case "end":return _context2.stop();}}}, _callee2);}))();
+    },
     // 点击取消订单时触发
-    handleCancelOrder: function handleCancelOrder() {var _this2 = this;
+    handleCancelOrder: function handleCancelOrder() {var _this3 = this;
       uni.showModal({
         title: '取消订单',
         content: '确定取消该订单么?',
         success: function () {var _success = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee3(res) {var _res;return _regenerator.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:if (!
                     res.confirm) {_context3.next = 12;break;}_context3.next = 3;return (
-                      _this2.$fetch(_this2.$api.cancelOrder, { orderId: _this2.orderId }, "GET"));case 3:_res = _context3.sent;if (!
+                      _this3.$fetch(_this3.$api.cancelOrder, { orderId: _this3.orderId }, "GET"));case 3:_res = _context3.sent;if (!
                     _res.code) {_context3.next = 6;break;}return _context3.abrupt("return", uni.showToast({ title: _res.msg, icon: 'none' }));case 6:
                     uni.showToast({ title: '订单取消成功~' });
-                    _this2.getOrderDetail();
-                    _this2.goIndex = Number(_this2.goIndex);
-                    if (_this2.goIndex == 2) {
+                    _this3.getOrderDetail();
+                    _this3.goIndex = Number(_this3.goIndex);
+                    if (_this3.goIndex == 2) {
                       uni.setStorageSync('backFlag', 4);
-                    } else if (_this2.goIndex == 1) {
+                    } else if (_this3.goIndex == 1) {
                       // 订单页面进来的
                       uni.setStorageSync('backFlag', 3);
                     }_context3.next = 13;break;case 12:
@@ -314,7 +315,7 @@ var _index = _interopRequireDefault(__webpack_require__(/*! @/config/index.js */
     closePopupPay: function closePopupPay() {
       this.$refs.popupPay.close();
     },
-    payOrder: function () {var _payOrder = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee4() {var res;return _regenerator.default.wrap(function _callee4$(_context4) {while (1) {switch (_context4.prev = _context4.next) {case 0:_context4.next = 2;return (
+    payOrder: function payOrder() {var _this4 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee4() {var res;return _regenerator.default.wrap(function _callee4$(_context4) {while (1) {switch (_context4.prev = _context4.next) {case 0:_context4.next = 2;return (
 
 
 
@@ -338,10 +339,10 @@ var _index = _interopRequireDefault(__webpack_require__(/*! @/config/index.js */
 
 
 
-                  this.$fetch(this.$api.pay, { orderId: this.orderId, pay: true, reward: true }, 'GET'));case 2:res = _context4.sent;
+                  _this4.$fetch(_this4.$api.pay, { orderId: _this4.orderId, pay: true, reward: true }, 'GET'));case 2:res = _context4.sent;
                 console.log(res);
-                this.computedTotalPriceFlag = false;
-                this.getOrderDetail();
+                _this4.computedTotalPriceFlag = false;
+                _this4.getOrderDetail();
                 if (!res.code) {
                   // 成功
                   uni.showModal({
@@ -349,11 +350,11 @@ var _index = _interopRequireDefault(__webpack_require__(/*! @/config/index.js */
                     content: '稍后客服会通过手机号码联系您，确定具体的上课时间及地点，请保持手机畅通！',
                     showCancel: false });
 
-                  this.$refs.popupPay.close();
-                  this.goIndex = Number(this.goIndex);
-                  if (this.goIndex == 2) {
+                  _this4.$refs.popupPay.close();
+                  _this4.goIndex = Number(_this4.goIndex);
+                  if (_this4.goIndex == 2) {
                     uni.setStorageSync('backFlag', 2);
-                  } else if (this.goIndex == 1) {
+                  } else if (_this4.goIndex == 1) {
                     uni.setStorageSync('backFlag', 1);
                   }
                 } else {
@@ -361,14 +362,14 @@ var _index = _interopRequireDefault(__webpack_require__(/*! @/config/index.js */
                     icon: 'none',
                     title: res.msg });
 
-                }case 7:case "end":return _context4.stop();}}}, _callee4, this);}));function payOrder() {return _payOrder.apply(this, arguments);}return payOrder;}(),
-
+                }case 7:case "end":return _context4.stop();}}}, _callee4);}))();
+    },
     // 订单支付界面
-    handleOrderBuy: function () {var _handleOrderBuy = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee5() {return _regenerator.default.wrap(function _callee5$(_context5) {while (1) {switch (_context5.prev = _context5.next) {case 0:
-                this.$refs.popupPay.open();case 1:case "end":return _context5.stop();}}}, _callee5, this);}));function handleOrderBuy() {return _handleOrderBuy.apply(this, arguments);}return handleOrderBuy;}(),
-
+    handleOrderBuy: function handleOrderBuy() {var _this5 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee5() {return _regenerator.default.wrap(function _callee5$(_context5) {while (1) {switch (_context5.prev = _context5.next) {case 0:
+                _this5.$refs.popupPay.open();case 1:case "end":return _context5.stop();}}}, _callee5);}))();
+    },
     // 打开课程详情
-    handleOpenCourseDetail: function handleOpenCourseDetail(_ref2) {var courseId = _ref2.courseId;
+    handleOpenCourseDetail: function handleOpenCourseDetail(_ref) {var courseId = _ref.courseId;
       uni.navigateTo({ url: '/pages/course-detail/course-detail?courseId=' + courseId });
     } },
 

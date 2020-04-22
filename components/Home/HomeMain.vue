@@ -93,12 +93,18 @@
 			// 更改Scroll选中
 			handleCurrentIndex (index) {
 				this.currentIndex = index
-				this.tochildId = this.scrollTab[this.currentIndex].childId
+				let childId = index == 0 ? this.scrollTab[this.currentIndex].childId: this.scrollTab[this.currentIndex - 1].childId
+				// this.tochildId = this.scrollTab[this.currentIndex].childId
+				this.tochildId = childId
 				this.$emit('handleCurrentIndex', this.currentIndex)
 			},
 			swiperChange (e) {
 				this.currentIndex = e.mp.detail.current
-				this.tochildId = this.scrollTab[this.currentIndex].childId
+				// this.tochildId = this.scrollTab[this.currentIndex].childId
+				
+				let childId = this.currentIndex == 0 ? this.scrollTab[this.currentIndex].childId: this.scrollTab[this.currentIndex - 1].childId
+				// this.tochildId = this.scrollTab[this.currentIndex].childId
+				this.tochildId = childId
 				this.$emit('handleCurrentIndex', this.currentIndex)
 			},
 			// 去课程详情
@@ -120,21 +126,20 @@
 </script>
 
 <style lang="scss" scoped>
+
 	.homeMain{
 		width: 100%;
 		min-height: 90rpx;
 		background-color: #fff;
 		.scroll-item-wrapper{
-			// display: inline-block;
-			// overflow: hidden;
 			display: flex;
 			justify-content: space-between;
-			// align-items: center;
-			// padding-top: 60rpx;
 			box-sizing: border-box;
+			
 			.scroll-item-ul{
 				display: inline-block;
 				white-space: nowrap;
+				
 				.scroll-item{
 					height: 60rpx;
 					display: inline-block;

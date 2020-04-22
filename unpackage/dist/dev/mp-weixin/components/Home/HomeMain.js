@@ -209,12 +209,18 @@ var _default = {
     // 更改Scroll选中
     handleCurrentIndex: function handleCurrentIndex(index) {
       this.currentIndex = index;
-      this.tochildId = this.scrollTab[this.currentIndex].childId;
+      var childId = index == 0 ? this.scrollTab[this.currentIndex].childId : this.scrollTab[this.currentIndex - 1].childId;
+      // this.tochildId = this.scrollTab[this.currentIndex].childId
+      this.tochildId = childId;
       this.$emit('handleCurrentIndex', this.currentIndex);
     },
     swiperChange: function swiperChange(e) {
       this.currentIndex = e.mp.detail.current;
-      this.tochildId = this.scrollTab[this.currentIndex].childId;
+      // this.tochildId = this.scrollTab[this.currentIndex].childId
+
+      var childId = this.currentIndex == 0 ? this.scrollTab[this.currentIndex].childId : this.scrollTab[this.currentIndex - 1].childId;
+      // this.tochildId = this.scrollTab[this.currentIndex].childId
+      this.tochildId = childId;
       this.$emit('handleCurrentIndex', this.currentIndex);
     },
     // 去课程详情

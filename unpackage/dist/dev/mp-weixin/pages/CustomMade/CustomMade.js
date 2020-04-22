@@ -131,7 +131,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 33));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};} //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/regenerator */ 33));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};} //
 //
 //
 //
@@ -171,8 +171,8 @@ var _default =
         delta: 1 });
 
     },
-    submitInfo: function () {var _submitInfo = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var reg, res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:if (!(
-                this.userName.trim() == '' || this.customInfo.trim() == '')) {_context.next = 3;break;}
+    submitInfo: function submitInfo() {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var reg, res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:if (!(
+                _this.userName.trim() == '' || _this.customInfo.trim() == '')) {_context.next = 3;break;}
                 uni.showToast({
                   icon: 'none',
                   title: '请检查输入的内容是否正确' });return _context.abrupt("return");case 3:
@@ -182,7 +182,7 @@ var _default =
 
                 // 校验手机
                 reg = /^1[3456789]\d{9}$/;if (
-                reg.test(this.userPhone)) {_context.next = 7;break;}
+                reg.test(_this.userPhone)) {_context.next = 7;break;}
                 uni.showToast({
                   icon: 'none',
                   title: '请检查手机号输入是否正确' });return _context.abrupt("return",
@@ -192,7 +192,7 @@ var _default =
 
 
 
-                  this.$fetch(this.$api.addCustomized, { name: this.userName, mobile: this.userPhone, content: this.customInfo }));case 9:res = _context.sent;
+                  _this.$fetch(_this.$api.addCustomized, { name: _this.userName, mobile: _this.userPhone, content: _this.customInfo }));case 9:res = _context.sent;
 
                 console.log(res);if (!
                 res.code) {_context.next = 13;break;}return _context.abrupt("return",
@@ -210,7 +210,10 @@ var _default =
                   uni.navigateBack({
                     delta: 1 });
 
-                }, 1500);case 15:case "end":return _context.stop();}}}, _callee, this);}));function submitInfo() {return _submitInfo.apply(this, arguments);}return submitInfo;}() } };exports.default = _default;
+                }, 1500);case 15:case "end":return _context.stop();}}}, _callee);}))();
+
+
+    } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),

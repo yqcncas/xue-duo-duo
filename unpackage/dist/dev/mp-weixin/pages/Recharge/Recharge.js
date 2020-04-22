@@ -96,10 +96,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components = {
-  "uni-popup": () =>
-    __webpack_require__.e(/*! import() | components/uni-popup/uni-popup */ "components/uni-popup/uni-popup").then(__webpack_require__.bind(null, /*! @/components/uni-popup/uni-popup.vue */ 316)),
-  SubmitButton: () =>
-    __webpack_require__.e(/*! import() | components/SubmitButton/SubmitButton */ "components/SubmitButton/SubmitButton").then(__webpack_require__.bind(null, /*! @/components/SubmitButton/SubmitButton.vue */ 323))
+  "uni-popup": function() {
+    return __webpack_require__.e(/*! import() | components/uni-popup/uni-popup */ "components/uni-popup/uni-popup").then(__webpack_require__.bind(null, /*! @/components/uni-popup/uni-popup.vue */ 316))
+  },
+  SubmitButton: function() {
+    return __webpack_require__.e(/*! import() | components/SubmitButton/SubmitButton */ "components/SubmitButton/SubmitButton").then(__webpack_require__.bind(null, /*! @/components/SubmitButton/SubmitButton.vue */ 323))
+  }
 }
 var render = function() {
   var _vm = this
@@ -138,7 +140,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 33));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var uniPopup = function uniPopup() {__webpack_require__.e(/*! require.ensure | components/uni-popup/uni-popup */ "components/uni-popup/uni-popup").then((function () {return resolve(__webpack_require__(/*! @/components/uni-popup/uni-popup.vue */ 316));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var SubmitButton = function SubmitButton() {__webpack_require__.e(/*! require.ensure | components/SubmitButton/SubmitButton */ "components/SubmitButton/SubmitButton").then((function () {return resolve(__webpack_require__(/*! ../../components/SubmitButton/SubmitButton.vue */ 323));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/regenerator */ 33));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var uniPopup = function uniPopup() {__webpack_require__.e(/*! require.ensure | components/uni-popup/uni-popup */ "components/uni-popup/uni-popup").then((function () {return resolve(__webpack_require__(/*! @/components/uni-popup/uni-popup.vue */ 316));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var SubmitButton = function SubmitButton() {__webpack_require__.e(/*! require.ensure | components/SubmitButton/SubmitButton */ "components/SubmitButton/SubmitButton").then((function () {return resolve(__webpack_require__(/*! ../../components/SubmitButton/SubmitButton.vue */ 323));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
@@ -236,13 +238,19 @@ __webpack_require__.r(__webpack_exports__);
 
   methods: {
     // 个人信息
-    getUserInfo: function () {var _getUserInfo = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var _ref, res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
+    getUserInfo: function getUserInfo() {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var _yield$_this$$fetch, res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
 
-                  this.$fetch(this.$api.userInfo, {}, 'GET', 'form'));case 2:_ref = _context.sent;res = _ref.data;
-                this.myEduMoney = res.money;case 5:case "end":return _context.stop();}}}, _callee, this);}));function getUserInfo() {return _getUserInfo.apply(this, arguments);}return getUserInfo;}(),
-
+                  _this.$fetch(_this.$api.userInfo, {}, 'GET', 'form'));case 2:_yield$_this$$fetch = _context.sent;res = _yield$_this$$fetch.data;
+                _this.myEduMoney = res.money;case 5:case "end":return _context.stop();}}}, _callee);}))();
+    },
     // 显示底部模态框
     submitClick: function submitClick() {
+      if (this.rechargePrice.trim() == '') {
+        return uni.showToast({
+          icon: 'none',
+          title: '请先填写充值金额' });
+
+      }
       this.$refs.popupPay.open();
     },
     // 更改支付方式
@@ -255,9 +263,9 @@ __webpack_require__.r(__webpack_exports__);
       this.rechargePrice = Number(this.rechargePrice).toFixed(2);
     },
     // 支付
-    payOrder: function () {var _payOrder = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var _this = this;var openId, res, payInfo;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:
+    payOrder: function payOrder() {var _this2 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var openId, res, payInfo;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:
                 openId = uni.getStorageSync('openId');_context2.next = 3;return (
-                  this.$fetch(this.$api.xcxPay, { totalAmount: this.rechargePrice, openId: openId }, 'POST', 'FORM'));case 3:res = _context2.sent;
+                  _this2.$fetch(_this2.$api.xcxPay, { totalAmount: _this2.rechargePrice, openId: openId }, 'POST', 'FORM'));case 3:res = _context2.sent;
                 console.log(res);
                 payInfo = JSON.parse(res.msg);
                 console.log(payInfo);
@@ -270,14 +278,14 @@ __webpack_require__.r(__webpack_exports__);
                   signType: payInfo.signType,
                   paySign: payInfo.paySign,
                   success: function success(res) {
-                    _this.$refs.popupPay.close();
+                    _this2.$refs.popupPay.close();
                     uni.showToast({
                       icon: 'success',
                       title: '支付成功' });
 
                     setTimeout(function () {
 
-                      if (_this.backFlag) {
+                      if (_this2.backFlag) {
                         uni.switchTab({
                           url: '../my/my' });
 
@@ -291,13 +299,15 @@ __webpack_require__.r(__webpack_exports__);
                     console.log('success:' + JSON.stringify(res));
                   },
                   fail: function fail(err) {
-                    _this.$refs.popupPay.close();
+                    _this2.$refs.popupPay.close();
                     uni.showToast({
                       icon: 'success',
                       title: '支付失败' });
 
                     console.log('fail:' + JSON.stringify(err));
-                  } });case 8:case "end":return _context2.stop();}}}, _callee2, this);}));function payOrder() {return _payOrder.apply(this, arguments);}return payOrder;}() } };exports.default = _default;
+                  } });case 8:case "end":return _context2.stop();}}}, _callee2);}))();
+
+    } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),

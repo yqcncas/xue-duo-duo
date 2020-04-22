@@ -89,7 +89,7 @@
 			async initLessonTab () {
 				let {data: res} = await this.$fetch(this.$api.getCourseType, {}, 'Get')
 				this.scrollTab = res
-				console.log(this.scrollTab)
+				
 				for (let i = 0; i < this.scrollTab.length; i++) {
 					this.scrollTab[i].childId = 'childId' + i
 				}

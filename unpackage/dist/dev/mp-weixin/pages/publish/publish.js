@@ -131,7 +131,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 33));
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/regenerator */ 33));
 
 
 
@@ -183,27 +183,27 @@ var _index = _interopRequireDefault(__webpack_require__(/*! ../../config/index.j
   },
   methods: {
     // 初始化可选学科
-    initMyLessonList: function () {var _initMyLessonList = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var _ref, res, i;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
-                  this.$fetch(this.$api.getCourseType, {}, 'Get'));case 2:_ref = _context.sent;res = _ref.data;
+    initMyLessonList: function initMyLessonList() {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var _yield$_this$$fetch, res, i;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
+                  _this.$fetch(_this.$api.getCourseType, {}, 'Get'));case 2:_yield$_this$$fetch = _context.sent;res = _yield$_this$$fetch.data;
 
-                this.lessonList = res;
-                console.log(this.lessonList);
-                for (i = 0; i < this.lessonList.length; i++) {
-                  this.showLessonList.push(this.lessonList[i].dictLabel);
-                }case 7:case "end":return _context.stop();}}}, _callee, this);}));function initMyLessonList() {return _initMyLessonList.apply(this, arguments);}return initMyLessonList;}(),
+                _this.lessonList = res;
+                console.log(_this.lessonList);
+                for (i = 0; i < _this.lessonList.length; i++) {
+                  _this.showLessonList.push(_this.lessonList[i].dictLabel);
+                }case 7:case "end":return _context.stop();}}}, _callee);}))();
 
-
+    },
     lessonSelecet: function lessonSelecet(e) {
       this.pickerIndex = Number(e.detail.value);
     },
     // 七牛
-    uptoken: function () {var _uptoken = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var res;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:_context2.next = 2;return (
-                  this.$fetch(this.$api.uptoken, {}, 'GET'));case 2:res = _context2.sent;
-                this.qiniutoken = res.data;case 4:case "end":return _context2.stop();}}}, _callee2, this);}));function uptoken() {return _uptoken.apply(this, arguments);}return uptoken;}(),
-
+    uptoken: function uptoken() {var _this2 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var res;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:_context2.next = 2;return (
+                  _this2.$fetch(_this2.$api.uptoken, {}, 'GET'));case 2:res = _context2.sent;
+                _this2.qiniutoken = res.data;case 4:case "end":return _context2.stop();}}}, _callee2);}))();
+    },
     //提交
-    publishSubmit: function () {var _publishSubmit = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee3() {var richTextList, res;return _regenerator.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:if (!(
-                this.textarea.trim() == '')) {_context3.next = 3;break;}
+    publishSubmit: function publishSubmit() {var _this3 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee3() {var richTextList, res;return _regenerator.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:if (!(
+                _this3.textarea.trim() == '')) {_context3.next = 3;break;}
                 uni.showToast({
                   icon: 'none',
                   title: '请确认您需要发布的信息' });return _context3.abrupt("return");case 3:
@@ -211,10 +211,10 @@ var _index = _interopRequireDefault(__webpack_require__(/*! ../../config/index.j
 
 
 
-                console.log(this.lessonList[this.pickerIndex].dictValue);
-                richTextList = this.richTextList.join(',');_context3.next = 7;return (
+                console.log(_this3.lessonList[_this3.pickerIndex].dictValue);
+                richTextList = _this3.richTextList.join(',');_context3.next = 7;return (
 
-                  this.$fetch(this.$api.addExperience, { courseTypeId: this.lessonList[this.pickerIndex].dictValue, content: this.textarea, pic: richTextList }));case 7:res = _context3.sent;
+                  _this3.$fetch(_this3.$api.addExperience, { courseTypeId: _this3.lessonList[_this3.pickerIndex].dictValue, content: _this3.textarea, pic: richTextList }));case 7:res = _context3.sent;
                 uni.showToast({
                   icon: 'none',
                   title: res.msg });
@@ -226,8 +226,8 @@ var _index = _interopRequireDefault(__webpack_require__(/*! ../../config/index.j
                       delta: 1 });
 
                   }, 1000);
-                }case 10:case "end":return _context3.stop();}}}, _callee3, this);}));function publishSubmit() {return _publishSubmit.apply(this, arguments);}return publishSubmit;}(),
-
+                }case 10:case "end":return _context3.stop();}}}, _callee3);}))();
+    },
     //预览图片
     previewImg: function previewImg(e) {
       uni.previewImage({
@@ -236,7 +236,7 @@ var _index = _interopRequireDefault(__webpack_require__(/*! ../../config/index.j
 
     },
     // 上传图片 
-    uploadImage: function uploadImage() {var _this = this;
+    uploadImage: function uploadImage() {var _this4 = this;
       if (this.token) {
         var token = uni.getStorageSync('token');
         var userId = uni.getStorageSync('userId');
@@ -246,18 +246,18 @@ var _index = _interopRequireDefault(__webpack_require__(/*! ../../config/index.j
           success: function success(res) {
             for (var i = 0; i < res.tempFilePaths.length; i++) {
               uni.uploadFile({
-                url: _this.$api.unloadLocation,
+                url: _this4.$api.unloadLocation,
                 filePath: res.tempFilePaths[i],
                 header: { token: token, userId: userId },
                 name: 'file',
                 formData: {
-                  token: _this.qiniutoken },
+                  token: _this4.qiniutoken },
 
                 success: function success(uploadFileRes) {
                   console.log(uploadFileRes);
                   var imgInfo = JSON.parse(uploadFileRes.data);
-                  _this.richTextList.push(_this.$api.baseLocation + imgInfo.hash);
-                  _this.imgList.push(imgInfo.fileName);
+                  _this4.richTextList.push(_this4.$api.baseLocation + imgInfo.hash);
+                  _this4.imgList.push(imgInfo.fileName);
                 } });
 
             }
@@ -272,7 +272,7 @@ var _index = _interopRequireDefault(__webpack_require__(/*! ../../config/index.j
       console.log(this.imgList);
     },
     // 删除图片
-    DelImage: function DelImage(e) {var _this2 = this;
+    DelImage: function DelImage(e) {var _this5 = this;
       uni.showModal({
         title: '是否删除图片',
         content: '确定要删除图片吗？',
@@ -280,8 +280,8 @@ var _index = _interopRequireDefault(__webpack_require__(/*! ../../config/index.j
         confirmText: '确定',
         success: function success(res) {
           if (res.confirm) {
-            _this2.richTextList.splice(e.currentTarget.dataset.index, 1);
-            _this2.imgList.splice(e.currentTarget.dataset.index, 1);
+            _this5.richTextList.splice(e.currentTarget.dataset.index, 1);
+            _this5.imgList.splice(e.currentTarget.dataset.index, 1);
           }
         } });
 

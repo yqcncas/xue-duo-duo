@@ -94,8 +94,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components = {
-  "uni-load-more": () =>
-    __webpack_require__.e(/*! import() | components/uni-load-more/uni-load-more */ "components/uni-load-more/uni-load-more").then(__webpack_require__.bind(null, /*! @/components/uni-load-more/uni-load-more.vue */ 277))
+  "uni-load-more": function() {
+    return __webpack_require__.e(/*! import() | components/uni-load-more/uni-load-more */ "components/uni-load-more/uni-load-more").then(__webpack_require__.bind(null, /*! @/components/uni-load-more/uni-load-more.vue */ 277))
+  }
 }
 var render = function() {
   var _vm = this
@@ -134,7 +135,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 33));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var uniLoadMore = function uniLoadMore() {__webpack_require__.e(/*! require.ensure | components/uni-load-more/uni-load-more */ "components/uni-load-more/uni-load-more").then((function () {return resolve(__webpack_require__(/*! @/components/uni-load-more/uni-load-more.vue */ 277));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/regenerator */ 33));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var uniLoadMore = function uniLoadMore() {__webpack_require__.e(/*! require.ensure | components/uni-load-more/uni-load-more */ "components/uni-load-more/uni-load-more").then((function () {return resolve(__webpack_require__(/*! @/components/uni-load-more/uni-load-more.vue */ 277));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
@@ -204,29 +205,29 @@ __webpack_require__.r(__webpack_exports__);
 
   },
   methods: {
-    initRecommendLesson: function () {var _initRecommendLesson = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
-                  this.$fetch(this.$api.getCourseList, { tj: 1 }, "GET"));case 2:res = _context.sent;
+    initRecommendLesson: function initRecommendLesson() {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
+                  _this.$fetch(_this.$api.getCourseList, { tj: 1 }, "GET"));case 2:res = _context.sent;
                 console.log(res);
-                this.recommendLesson = res.rows;
-                console.log(this.recommendLesson);case 6:case "end":return _context.stop();}}}, _callee, this);}));function initRecommendLesson() {return _initRecommendLesson.apply(this, arguments);}return initRecommendLesson;}(),
-
-    initGetChapterList: function () {var _initGetChapterList = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var _ref, res;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:_context2.next = 2;return (
-                  this.$fetch(this.$api.getArticleType, {}, 'GET'));case 2:_ref = _context2.sent;res = _ref.data;
+                _this.recommendLesson = res.rows;
+                console.log(_this.recommendLesson);case 6:case "end":return _context.stop();}}}, _callee);}))();
+    },
+    initGetChapterList: function initGetChapterList() {var _this2 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var _yield$_this2$$fetch, res;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:_context2.next = 2;return (
+                  _this2.$fetch(_this2.$api.getArticleType, {}, 'GET'));case 2:_yield$_this2$$fetch = _context2.sent;res = _yield$_this2$$fetch.data;
                 console.log(res);
-                this.ChapterList = res;
-                this.currentDictValue = this.ChapterList[0].dictValue;
+                _this2.ChapterList = res;
+                _this2.currentDictValue = _this2.ChapterList[0].dictValue;
                 // 章节数据
-                this.initChapterList();case 8:case "end":return _context2.stop();}}}, _callee2, this);}));function initGetChapterList() {return _initGetChapterList.apply(this, arguments);}return initGetChapterList;}(),
-
-    initChapterList: function () {var _initChapterList = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee3() {var _ref2, res;return _regenerator.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:
-                console.log(this.ChapterList[0].dictValue);if (
-                this.hasFlag) {_context3.next = 3;break;}return _context3.abrupt("return");case 3:
-                this.pageNum++;_context3.next = 6;return (
-                  this.$fetch(this.$api.articleList, { typeId: this.currentDictValue, pageNum: this.pageNum, pageSize: 10 }, 'POST', 'FORM'));case 6:_ref2 = _context3.sent;res = _ref2.data;
+                _this2.initChapterList();case 8:case "end":return _context2.stop();}}}, _callee2);}))();
+    },
+    initChapterList: function initChapterList() {var _this3 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee3() {var _yield$_this3$$fetch, res;return _regenerator.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:
+                console.log(_this3.ChapterList[0].dictValue);if (
+                _this3.hasFlag) {_context3.next = 3;break;}return _context3.abrupt("return");case 3:
+                _this3.pageNum++;_context3.next = 6;return (
+                  _this3.$fetch(_this3.$api.articleList, { typeId: _this3.currentDictValue, pageNum: _this3.pageNum, pageSize: 10 }, 'POST', 'FORM'));case 6:_yield$_this3$$fetch = _context3.sent;res = _yield$_this3$$fetch.data;
                 console.log(res);
-                this.findList = res;
-                this.hasFlag = this.pageNum * 10 < res.total;case 11:case "end":return _context3.stop();}}}, _callee3, this);}));function initChapterList() {return _initChapterList.apply(this, arguments);}return initChapterList;}(),
-
+                _this3.findList = res;
+                _this3.hasFlag = _this3.pageNum * 10 < res.total;case 11:case "end":return _context3.stop();}}}, _callee3);}))();
+    },
     // 头部点击 去详情
     goToLessonDetail: function goToLessonDetail(index) {
       uni.navigateTo({

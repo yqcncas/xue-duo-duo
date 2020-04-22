@@ -204,12 +204,14 @@
 		},
 		onShow() {
 			if(!uni.getStorageSync('token')){
+				console.log('12313')
 				this.loginModalShow = true
 			}else{
 				this.getUserInfo()
 			}
 			setTimeout(() => {
 				if(uni.getStorageSync('showLogin')) {
+					console.log('5555')
 					this.loginModalShow = uni.getStorageSync('showLogin')
 				}
 			}, 300)

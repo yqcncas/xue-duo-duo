@@ -103,6 +103,12 @@
 			},
 			// 显示底部模态框
 			submitClick () {
+				if (this.rechargePrice.trim() == '') {
+					return uni.showToast({
+						icon: 'none',
+						title: '请先填写充值金额'
+					})
+				}
 				this.$refs.popupPay.open()
 			},
 			// 更改支付方式

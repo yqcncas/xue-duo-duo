@@ -1,7 +1,34 @@
 <script>
 	export default {
-		onLaunch: function() {
-			console.log('App Launch')
+		methods: {
+			// 微信登录
+			// wxlogin(){
+			// 	uni.login({
+			// 		provider:'weixin',
+			// 		success: (res) => {
+			// 			console.log(res)
+			// 			if(res.code){
+			// 				let code = res.code
+			// 				this.getOpenId(code)
+			// 			}
+			// 		}
+			// 	})
+			// },
+			// // 获取openId根据是否有用户信息来判断是否去授权登录
+			// async getOpenId(code){
+			// 	let res = await this.$fetch(this.$api.getOpenId,{js_code: code},'GET')
+
+			// 	if(res.code == 0){
+				
+			// 	}else{
+			// 		uni.setStorageSync('token',res.data.token)
+			// 	}
+			// 	uni.setStorageSync('openId', res.data.openid)
+
+			// },
+		},
+		onLaunch: () => {
+			// this.initLogin()
 		},
 		onShow: function() {
 			console.log('App Show')
@@ -58,5 +85,15 @@
 	swiper .uni-swiper-dot.uni-swiper-dot-active {
 		opacity: 1;
 		background: #FE5E50;
+	}
+	::-webkit-scrollbar {
+		display: none;  
+		width: 0 !important;  
+		height: 0 !important;  
+		-webkit-appearance: none;  
+		background: transparent;  
+	}
+	.ip-center{
+		text-align: center;
 	}
 </style>

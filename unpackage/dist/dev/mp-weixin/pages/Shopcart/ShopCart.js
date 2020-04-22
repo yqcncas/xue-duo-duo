@@ -24,7 +24,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 33));
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/regenerator */ 33));
 
 
 
@@ -75,7 +75,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _index = _interopRequireDefault(__webpack_require__(/*! @/config/index.js */ 16));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance");}function _iterableToArray(iter) {if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) {for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {arr2[i] = arr[i];}return arr2;}}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var uniLoadMore = function uniLoadMore() {__webpack_require__.e(/*! require.ensure | components/uni-load-more/uni-load-more */ "components/uni-load-more/uni-load-more").then((function () {return resolve(__webpack_require__(/*! @/components/uni-load-more/uni-load-more.vue */ 277));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+var _index = _interopRequireDefault(__webpack_require__(/*! @/config/index.js */ 16));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(n);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var uniLoadMore = function uniLoadMore() {__webpack_require__.e(/*! require.ensure | components/uni-load-more/uni-load-more */ "components/uni-load-more/uni-load-more").then((function () {return resolve(__webpack_require__(/*! @/components/uni-load-more/uni-load-more.vue */ 277));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 {
   components: { uniLoadMore: uniLoadMore },
@@ -113,13 +113,13 @@ var _index = _interopRequireDefault(__webpack_require__(/*! @/config/index.js */
 
   methods: {
     // 获取购物车列表
-    getCartList: function () {var _getCartList = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:if (
-                this.hasFlag) {_context.next = 2;break;}return _context.abrupt("return");case 2: // 说明已经没有更多啦
+    getCartList: function getCartList() {var _this2 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:if (
+                _this2.hasFlag) {_context.next = 2;break;}return _context.abrupt("return");case 2: // 说明已经没有更多啦
                 console.log('进入');
-                ++this.pageNum;_context.next = 6;return (
-                  this.$fetch(this.$api.getCartList, { pageNum: this.pageNum, pageSize: this.pageSize }, 'GET'));case 6:res = _context.sent;
+                ++_this2.pageNum;_context.next = 6;return (
+                  _this2.$fetch(_this2.$api.getCartList, { pageNum: _this2.pageNum, pageSize: _this2.pageSize }, 'GET'));case 6:res = _context.sent;
                 console.log(res);
-                this.hasFlag = this.pageNum * this.pageSize < res.total;
+                _this2.hasFlag = _this2.pageNum * _this2.pageSize < res.total;
                 res.rows.forEach(function (item) {
                   item.select = false; // 默认全部没选中
                   // this.course_type_list.forEach(course_type_item => {
@@ -129,8 +129,8 @@ var _index = _interopRequireDefault(__webpack_require__(/*! @/config/index.js */
                   // })
                 });
 
-                this.cartList = [].concat(_toConsumableArray(this.cartList), _toConsumableArray(res.rows));case 11:case "end":return _context.stop();}}}, _callee, this);}));function getCartList() {return _getCartList.apply(this, arguments);}return getCartList;}(),
-
+                _this2.cartList = [].concat(_toConsumableArray(_this2.cartList), _toConsumableArray(res.rows));case 11:case "end":return _context.stop();}}}, _callee);}))();
+    },
     // 切换购物车状态
     handleToggle: function handleToggle(item, index) {
       console.log(item);
@@ -157,11 +157,11 @@ var _index = _interopRequireDefault(__webpack_require__(/*! @/config/index.js */
       });
     },
     // 购物车生成订单
-    handleGenerateOrder: function () {var _handleGenerateOrder = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var orderItemIds, res;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:
+    handleGenerateOrder: function handleGenerateOrder() {var _this3 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var orderItemIds, res;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:
                 uni.showLoading({ title: '订单生成中...' });
                 orderItemIds = [];
-                this.cartList.forEach(function (item) {if (item.select) orderItemIds.push(item.orderItemId);});_context2.next = 5;return (
-                  this.$fetch(this.$api.genOrder, { orderItemIds: orderItemIds.join(',') }, 'GET'));case 5:res = _context2.sent;
+                _this3.cartList.forEach(function (item) {if (item.select) orderItemIds.push(item.orderItemId);});_context2.next = 5;return (
+                  _this3.$fetch(_this3.$api.genOrder, { orderItemIds: orderItemIds.join(',') }, 'GET'));case 5:res = _context2.sent;
                 uni.hideLoading();if (!
                 res.code) {_context2.next = 9;break;}return _context2.abrupt("return", uni.showToast({ title: res.msg, icon: 'none' }));case 9:
                 console.log(res);
@@ -171,9 +171,9 @@ var _index = _interopRequireDefault(__webpack_require__(/*! @/config/index.js */
                 // 	url: '../orderDeatail/OrderDetail?orderId=' + res.data.orderId
                 // })
                 uni.navigateTo({
-                  url: '../orderDeatail/OrderDetail?orderId=' + res.data.orderId });case 11:case "end":return _context2.stop();}}}, _callee2, this);}));function handleGenerateOrder() {return _handleGenerateOrder.apply(this, arguments);}return handleGenerateOrder;}(),
+                  url: '../orderDeatail/OrderDetail?orderId=' + res.data.orderId });case 11:case "end":return _context2.stop();}}}, _callee2);}))();
 
-
+    },
     // 前往课程详情页面
     handleOpenCourseDetail: function handleOpenCourseDetail(courseId) {
       // uni.navigateTo({ url: '/pages/course-detail/course-detail?courseId='+courseId })
@@ -182,20 +182,20 @@ var _index = _interopRequireDefault(__webpack_require__(/*! @/config/index.js */
 
     },
     // 删除选中的购物车中的商品
-    handleDeleteCart: function () {var _handleDeleteCart = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee3() {var orderItemIds, orderItemIdsClone, res;return _regenerator.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:
+    handleDeleteCart: function handleDeleteCart() {var _this4 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee3() {var orderItemIds, orderItemIdsClone, res;return _regenerator.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:
                 orderItemIds = [];
-                this.cartList.forEach(function (item) {if (item.select) orderItemIds.push(item.orderItemId);});if (
+                _this4.cartList.forEach(function (item) {if (item.select) orderItemIds.push(item.orderItemId);});if (
                 orderItemIds.length) {_context3.next = 4;break;}return _context3.abrupt("return", uni.showToast({ title: '您还没有选中要删除的课程~', icon: 'none' }));case 4:
                 orderItemIdsClone = JSON.parse(JSON.stringify(orderItemIds));_context3.next = 7;return (
-                  this.$fetch(this.$api.delCart, { orderItemIds: orderItemIdsClone.join(',') }, 'GET'));case 7:res = _context3.sent;if (!
+                  _this4.$fetch(_this4.$api.delCart, { orderItemIds: orderItemIdsClone.join(',') }, 'GET'));case 7:res = _context3.sent;if (!
                 res.code) {_context3.next = 10;break;}return _context3.abrupt("return", uni.showToast({ title: res.msg, icon: 'none' }));case 10:
                 // 重置数据
-                this.hasFlag = true; // 是否还有更多
-                this.pageNum = 0; // 当前页码
-                this.pageSize = 10; // 每页数量
-                this.cartList = []; // 列表
-                this.getCartList(); // 获取最新的
-              case 15:case "end":return _context3.stop();}}}, _callee3, this);}));function handleDeleteCart() {return _handleDeleteCart.apply(this, arguments);}return handleDeleteCart;}() },
+                _this4.hasFlag = true; // 是否还有更多
+                _this4.pageNum = 0; // 当前页码
+                _this4.pageSize = 10; // 每页数量
+                _this4.cartList = []; // 列表
+                _this4.getCartList(); // 获取最新的
+              case 15:case "end":return _context3.stop();}}}, _callee3);}))();} },
 
   onLoad: function onLoad() {
     this.getCartList();
@@ -331,8 +331,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components = {
-  "uni-load-more": () =>
-    __webpack_require__.e(/*! import() | components/uni-load-more/uni-load-more */ "components/uni-load-more/uni-load-more").then(__webpack_require__.bind(null, /*! @/components/uni-load-more/uni-load-more.vue */ 277))
+  "uni-load-more": function() {
+    return __webpack_require__.e(/*! import() | components/uni-load-more/uni-load-more */ "components/uni-load-more/uni-load-more").then(__webpack_require__.bind(null, /*! @/components/uni-load-more/uni-load-more.vue */ 277))
+  }
 }
 var render = function() {
   var _vm = this

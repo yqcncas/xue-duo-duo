@@ -131,7 +131,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 33));
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/regenerator */ 33));
 
 
 
@@ -284,30 +284,30 @@ var _index = _interopRequireDefault(__webpack_require__(/*! @/config/index.js */
       this.getUserInfo();
     },
     // 二维码
-    initGetQRCode: function () {var _initGetQRCode = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
-                  this.$fetch(this.$api.getQrCode, {}, 'GET', 'FORM'));case 2:res = _context.sent;
-                this.QRUrl = _index.default + res.data.slice(1);
-                console.log(this.QRUrl);case 5:case "end":return _context.stop();}}}, _callee, this);}));function initGetQRCode() {return _initGetQRCode.apply(this, arguments);}return initGetQRCode;}(),
-
+    initGetQRCode: function initGetQRCode() {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
+                  _this.$fetch(_this.$api.getQrCode, {}, 'GET', 'FORM'));case 2:res = _context.sent;
+                _this.QRUrl = _index.default + res.data.slice(1);
+                console.log(_this.QRUrl);case 5:case "end":return _context.stop();}}}, _callee);}))();
+    },
     // 获取个人信息
-    getUserInfo: function () {var _getUserInfo = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var res, userInfo, classTrue;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:_context2.next = 2;return (
+    getUserInfo: function getUserInfo() {var _this2 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var res, userInfo, classTrue;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:_context2.next = 2;return (
 
-                  this.$fetch(this.$api.userInfo, {}, 'GET', 'form'));case 2:res = _context2.sent;
-                this.userName = res.data.userName;
-                this.mobile = res.data.phonenumber;
-                this.avatar = res.data.avatar;
-                this.myEduMoney = Number(res.data.money).toFixed(2);
-                this.myMoney = Number(res.data.reward).toFixed(2);
+                  _this2.$fetch(_this2.$api.userInfo, {}, 'GET', 'form'));case 2:res = _context2.sent;
+                _this2.userName = res.data.userName;
+                _this2.mobile = res.data.phonenumber;
+                _this2.avatar = res.data.avatar;
+                _this2.myEduMoney = Number(res.data.money).toFixed(2);
+                _this2.myMoney = Number(res.data.reward).toFixed(2);
 
-                if (!this.myMoney) {
-                  this.myMoney = 0;
+                if (!_this2.myMoney) {
+                  _this2.myMoney = 0;
                 }
-                if (!this.myEduMoney) {
-                  this.myEduMoney = 0;
+                if (!_this2.myEduMoney) {
+                  _this2.myEduMoney = 0;
                 }
                 userInfo = {
-                  userAvatar: this.avatar,
-                  userName: this.userName,
+                  userAvatar: _this2.avatar,
+                  userName: _this2.userName,
                   userId: res.data.userId };
 
                 uni.setStorageSync('userInfo', userInfo);
@@ -322,10 +322,10 @@ var _index = _interopRequireDefault(__webpack_require__(/*! @/config/index.js */
                 uni.setStorageSync('classTrue', JSON.stringify(classTrue));
                 uni.setStorageSync('classTrueId', res.data.classTypeId);
                 uni.setStorageSync('classBackFresh', true);
-                this.initGetQRCode();case 18:case "end":return _context2.stop();}}}, _callee2, this);}));function getUserInfo() {return _getUserInfo.apply(this, arguments);}return getUserInfo;}(),
+                _this2.initGetQRCode();case 18:case "end":return _context2.stop();}}}, _callee2);}))();
 
 
-
+    },
     // 注册完成后重新获取个人信息
     getFresh: function getFresh(data) {
       console.log(data);
@@ -335,15 +335,17 @@ var _index = _interopRequireDefault(__webpack_require__(/*! @/config/index.js */
     } },
 
 
-  onShow: function onShow() {var _this = this;
+  onShow: function onShow() {var _this3 = this;
     if (!uni.getStorageSync('token')) {
+      console.log('12313');
       this.loginModalShow = true;
     } else {
       this.getUserInfo();
     }
     setTimeout(function () {
       if (uni.getStorageSync('showLogin')) {
-        _this.loginModalShow = uni.getStorageSync('showLogin');
+        console.log('5555');
+        _this3.loginModalShow = uni.getStorageSync('showLogin');
       }
     }, 300);
 

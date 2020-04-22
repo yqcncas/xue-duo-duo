@@ -94,8 +94,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components = {
-  "uni-load-more": () =>
-    __webpack_require__.e(/*! import() | components/uni-load-more/uni-load-more */ "components/uni-load-more/uni-load-more").then(__webpack_require__.bind(null, /*! @/components/uni-load-more/uni-load-more.vue */ 277))
+  "uni-load-more": function() {
+    return __webpack_require__.e(/*! import() | components/uni-load-more/uni-load-more */ "components/uni-load-more/uni-load-more").then(__webpack_require__.bind(null, /*! @/components/uni-load-more/uni-load-more.vue */ 277))
+  }
 }
 var render = function() {
   var _vm = this
@@ -134,7 +135,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 33));
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/regenerator */ 33));
 
 
 
@@ -236,18 +237,18 @@ var _index = _interopRequireDefault(__webpack_require__(/*! @/config/index.js */
 
   methods: {
     // 获取搜索结果
-    getSearchList: function () {var _getSearchList = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:if (
-                this.hasFlag) {_context.next = 2;break;}return _context.abrupt("return");case 2:
-                this.pageNum++;_context.next = 5;return (
-                  this.$fetch(this.$api.getCourseList, { name: this.name, pageSize: this.pageSize, pageNum: this.pageNum }, 'GET'));case 5:res = _context.sent;
+    getSearchList: function getSearchList() {var _this2 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:if (
+                _this2.hasFlag) {_context.next = 2;break;}return _context.abrupt("return");case 2:
+                _this2.pageNum++;_context.next = 5;return (
+                  _this2.$fetch(_this2.$api.getCourseList, { name: _this2.name, pageSize: _this2.pageSize, pageNum: _this2.pageNum }, 'GET'));case 5:res = _context.sent;
                 // res.rows.forEach(item => {
                 // 	this.course_type_list.forEach(courseItem => {
                 // 		if (item.courseTypeId === courseItem.id) item.courseName = courseItem.name
                 // 	})
                 // })
-                this.list = res.rows;
-                this.hasFlag = this.pageSize * this.pageNum < res.total;case 8:case "end":return _context.stop();}}}, _callee, this);}));function getSearchList() {return _getSearchList.apply(this, arguments);}return getSearchList;}(),
-
+                _this2.list = res.rows;
+                _this2.hasFlag = _this2.pageSize * _this2.pageNum < res.total;case 8:case "end":return _context.stop();}}}, _callee);}))();
+    },
     // 去课程详情
     goToLessonDetail: function goToLessonDetail(courseId) {
       uni.navigateTo({

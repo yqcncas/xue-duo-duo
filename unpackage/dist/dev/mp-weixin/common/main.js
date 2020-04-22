@@ -111,8 +111,35 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default =
 {
+  methods: {
+    // 微信登录
+    // wxlogin(){
+    // 	uni.login({
+    // 		provider:'weixin',
+    // 		success: (res) => {
+    // 			console.log(res)
+    // 			if(res.code){
+    // 				let code = res.code
+    // 				this.getOpenId(code)
+    // 			}
+    // 		}
+    // 	})
+    // },
+    // // 获取openId根据是否有用户信息来判断是否去授权登录
+    // async getOpenId(code){
+    // 	let res = await this.$fetch(this.$api.getOpenId,{js_code: code},'GET')
+
+    // 	if(res.code == 0){
+
+    // 	}else{
+    // 		uni.setStorageSync('token',res.data.token)
+    // 	}
+    // 	uni.setStorageSync('openId', res.data.openid)
+
+    // },
+  },
   onLaunch: function onLaunch() {
-    console.log('App Launch');
+    // this.initLogin()
   },
   onShow: function onShow() {
     console.log('App Show');

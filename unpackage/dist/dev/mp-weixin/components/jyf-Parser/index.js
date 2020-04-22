@@ -114,7 +114,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var trees = function trees() {__webpack_require__.e(/*! require.ensure | components/jyf-Parser/trees */ "components/jyf-Parser/trees").then((function () {return resolve(__webpack_require__(/*! ./trees */ 359));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;function _createForOfIteratorHelper(o) {if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) {if (Array.isArray(o) || (o = _unsupportedIterableToArray(o))) {var i = 0;var F = function F() {};return { s: F, n: function n() {if (i >= o.length) return { done: true };return { done: false, value: o[i++] };}, e: function e(_e) {throw _e;}, f: F };}throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}var it,normalCompletion = true,didErr = false,err;return { s: function s() {it = o[Symbol.iterator]();}, n: function n() {var step = it.next();normalCompletion = step.done;return step;}, e: function e(_e2) {didErr = true;err = _e2;}, f: function f() {try {if (!normalCompletion && it.return != null) it.return();} finally {if (didErr) throw err;}} };}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(n);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}var trees = function trees() {__webpack_require__.e(/*! require.ensure | components/jyf-Parser/trees */ "components/jyf-Parser/trees").then((function () {return resolve(__webpack_require__(/*! ./trees */ 359));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
 
 
 
@@ -283,12 +283,12 @@ var _default2 = {
       }
     },
 
-    getContext: function getContext(components) {var _this2 = this;var _iteratorNormalCompletion = true;var _didIteratorError = false;var _iteratorError = undefined;try {var _loop = function _loop() {var
-          component = _step.value;
+    getContext: function getContext(components) {var _this2 = this;var _iterator = _createForOfIteratorHelper(
+      components),_step;try {var _loop = function _loop() {var component = _step.value;
           var observered = false;
           if (!component.nodes)
-          return { v: _this2.getContext(component.$children) };var _iteratorNormalCompletion2 = true;var _didIteratorError2 = false;var _iteratorError2 = undefined;try {
-            for (var _iterator2 = component.nodes[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {var item = _step2.value;
+          return { v: _this2.getContext(component.$children) };var _iterator2 = _createForOfIteratorHelper(
+          component.nodes),_step2;try {for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {var item = _step2.value;
               if (item.name == 'img' && !observered) {
                 observered = true;
                 if (component.lazyLoad && CanIUseObserver) {
@@ -309,9 +309,9 @@ var _default2 = {
                   context: uni.createVideoContext(item.attrs.id, component) });
 
               }
-            }} catch (err) {_didIteratorError2 = true;_iteratorError2 = err;} finally {try {if (!_iteratorNormalCompletion2 && _iterator2.return != null) {_iterator2.return();}} finally {if (_didIteratorError2) {throw _iteratorError2;}}}
-          _this2.getContext(component.$children);};for (var _iterator = components[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {var _ret = _loop();if (typeof _ret === "object") return _ret.v;
-        }} catch (err) {_didIteratorError = true;_iteratorError = err;} finally {try {if (!_iteratorNormalCompletion && _iterator.return != null) {_iterator.return();}} finally {if (_didIteratorError) {throw _iteratorError;}}}
+            }} catch (err) {_iterator2.e(err);} finally {_iterator2.f();}
+          _this2.getContext(component.$children);};for (_iterator.s(); !(_step = _iterator.n()).done;) {var _ret = _loop();if (typeof _ret === "object") return _ret.v;
+        }} catch (err) {_iterator.e(err);} finally {_iterator.f();}
     },
 
     ready: function ready() {var _this3 = this;

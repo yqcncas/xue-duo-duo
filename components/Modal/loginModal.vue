@@ -34,7 +34,7 @@
 				session_key:'',
 				phone:'',
 				sex:'',
-				appId:'wx6597547107ae5139',
+				appId:'wx6a58a40ac32f4dde',
 				cancelShow:false,
 				inviterCode:''
 			}
@@ -97,8 +97,8 @@
 				uni.login({
 					provider:'weixin',
 					success: (res) => {
+						console.log(res)
 						if(res.code){
-							console.log(res.code)
 							this.code = res.code
 							this.getOpenId()
 						}
@@ -109,6 +109,7 @@
 			async getOpenId(){
 				let res = await this.$fetch(this.$api.getOpenId,{js_code: this.code},'GET')
 				console.log(res)
+				console.log(res.data)
 				if(res.code == 0){
 				
 				}else{
@@ -152,6 +153,7 @@
 								content:'您取消了授权'
 							})
 						}else{
+							console.log(this.appId,this.session_key)
 							var pc = new WXBizDataCrypt(this.appId,this.session_key)
 							var data = pc.decryptData(e.detail.encryptedData, e.detail.iv)
 							console.log(data.phoneNumber)
@@ -190,6 +192,7 @@
 							title:res.msg
 						})
 						let msg = await this.$fetch(this.$api.wxLogin, {openId: this.openid}, 'GET')
+						console.log(msg)
 						uni.setStorageSync('token', msg.data.token)
 						this.$emit('fresh',true)
 						console.log(msg)
@@ -207,25 +210,32 @@
 					let res = await this.$fetch(this.$api.register,{
 						openId: this.openid, userName:this.nickName,mobile:this.phone,sex:this.sex,avatar:this.avatar
 					}, 'GET')
-					
+					console.log(res)
+					console.log(214)
 					if(res.code === 0){
 						uni.showToast({
 							icon:'none',
 							title:res.msg
 						})
 						let msg = await this.$fetch(this.$api.wxLogin, {openId: this.openid}, 'GET')
+						console.log(msg)
+						console.log(223)
 						uni.setStorageSync('token', msg.data.token)
 						this.$emit('fresh',true)
 						console.log(msg)
+						console.log(223)
 						uni.removeStorageSync('showLogin')
 						// 注册成功清除邀请码缓存
 						uni.removeStorageSync('qrCode')
 					} else {
 						let msg = await this.$fetch(this.$api.wxLogin, {openId: this.openid}, 'GET')
+						console.log(msg)
+						console.log(230)
 						uni.setStorageSync('token', msg.data.token)
 						uni.removeStorageSync('showLogin')
 						this.$emit('fresh',true)
 						console.log(msg)
+						console.log(230)
 					}
 				}
 				

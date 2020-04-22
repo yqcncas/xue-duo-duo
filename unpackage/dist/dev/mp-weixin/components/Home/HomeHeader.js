@@ -133,10 +133,11 @@ __webpack_require__.r(__webpack_exports__);
 var _default =
 {
   data: function data() {
-    return {};
-
+    return {
+      searchFlag: true };
 
   },
+
   methods: {
     goToClassTrue: function goToClassTrue() {
       console.log(this.homeHeaderClassTrue.name == undefined);
@@ -144,9 +145,16 @@ var _default =
         url: '../../pages/ClassTrue/ClassTrue?infoOrindex=' + 2 });
 
     },
-    goToSearch: function goToSearch() {
-      uni.navigateTo({
-        url: '../../pages/search/search' });
+    goToSearch: function goToSearch() {var _this = this;
+      if (this.searchFlag) {
+        this.searchFlag = false;
+        setTimeout(function () {
+          _this.searchFlag = true;
+        }, 700);
+        uni.navigateTo({
+          url: '../../pages/search/search' });
+
+      }
 
     },
     goToShopCart: function goToShopCart() {

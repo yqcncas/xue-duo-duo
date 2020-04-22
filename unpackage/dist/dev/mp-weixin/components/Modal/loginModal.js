@@ -114,7 +114,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 33));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};} //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/regenerator */ 33));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};} //
 //
 //
 //
@@ -150,7 +150,7 @@ var WXBizDataCrypt = __webpack_require__(/*! ../../crypto/WXBizDataCrypt.js */ 2
       session_key: '',
       phone: '',
       sex: '',
-      appId: 'wx6597547107ae5139',
+      appId: 'wx6a58a40ac32f4dde',
       cancelShow: false,
       inviterCode: '' };
 
@@ -213,8 +213,8 @@ var WXBizDataCrypt = __webpack_require__(/*! ../../crypto/WXBizDataCrypt.js */ 2
       uni.login({
         provider: 'weixin',
         success: function success(res) {
+          console.log(res);
           if (res.code) {
-            console.log(res.code);
             _this.code = res.code;
             _this.getOpenId();
           }
@@ -222,18 +222,19 @@ var WXBizDataCrypt = __webpack_require__(/*! ../../crypto/WXBizDataCrypt.js */ 2
 
     },
     // 获取openId根据是否有用户信息来判断是否去授权登录
-    getOpenId: function () {var _getOpenId = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
-                  this.$fetch(this.$api.getOpenId, { js_code: this.code }, 'GET'));case 2:res = _context.sent;
+    getOpenId: function getOpenId() {var _this2 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
+                  _this2.$fetch(_this2.$api.getOpenId, { js_code: _this2.code }, 'GET'));case 2:res = _context.sent;
                 console.log(res);
+                console.log(res.data);
                 if (res.code == 0) {
 
                 } else {
                   uni.setStorageSync('token', res.data.token);
                 }
-                this.openid = res.data.openid;
-                uni.setStorageSync('openId', this.openid);
-                this.session_key = res.data.session_key;case 8:case "end":return _context.stop();}}}, _callee, this);}));function getOpenId() {return _getOpenId.apply(this, arguments);}return getOpenId;}(),
-
+                _this2.openid = res.data.openid;
+                uni.setStorageSync('openId', _this2.openid);
+                _this2.session_key = res.data.session_key;case 9:case "end":return _context.stop();}}}, _callee);}))();
+    },
     // 授权昵称和头像
     GetUserInfo: function GetUserInfo(e) {
       console.log(e);
@@ -268,6 +269,7 @@ var WXBizDataCrypt = __webpack_require__(/*! ../../crypto/WXBizDataCrypt.js */ 2
             content: '您取消了授权' });
 
         } else {
+          console.log(this.appId, this.session_key);
           var pc = new WXBizDataCrypt(this.appId, this.session_key);
           var data = pc.decryptData(e.detail.encryptedData, e.detail.iv);
           console.log(data.phoneNumber);
@@ -283,71 +285,79 @@ var WXBizDataCrypt = __webpack_require__(/*! ../../crypto/WXBizDataCrypt.js */ 2
       }
     },
     // 注册用户
-    reg: function () {var _reg = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2(pwd) {var res, msg, _msg, _res, _msg2, _msg3;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:
+    reg: function reg(pwd) {var _this3 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var res, msg, _msg, _res, _msg2, _msg3;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:
                 // 判断是否有邀请码
                 if (uni.getStorageSync('qrCode')) {
-                  this.inviterCode = uni.getStorageSync('qrCode');
+                  _this3.inviterCode = uni.getStorageSync('qrCode');
                 } else {
-                  this.inviterCode = '';
+                  _this3.inviterCode = '';
                 }
-                console.log(this.openid);
-                console.log(this.nickName);
-                console.log(this.phone);
-                console.log(this.sex);
-                console.log(this.avatar);if (!
-                this.inviterCode) {_context2.next = 31;break;}_context2.next = 9;return (
-                  this.$fetch(this.$api.register, {
-                    openId: this.openid, userName: this.nickName, mobile: this.phone, sex: this.sex, avatar: this.avatar, qrcode: this.inviterCode },
+                console.log(_this3.openid);
+                console.log(_this3.nickName);
+                console.log(_this3.phone);
+                console.log(_this3.sex);
+                console.log(_this3.avatar);if (!
+                _this3.inviterCode) {_context2.next = 32;break;}_context2.next = 9;return (
+                  _this3.$fetch(_this3.$api.register, {
+                    openId: _this3.openid, userName: _this3.nickName, mobile: _this3.phone, sex: _this3.sex, avatar: _this3.avatar, qrcode: _this3.inviterCode },
                   'GET'));case 9:res = _context2.sent;if (!(
 
-                res.code === 0)) {_context2.next = 22;break;}
+                res.code === 0)) {_context2.next = 23;break;}
                 uni.showToast({
                   icon: 'none',
                   title: res.msg });_context2.next = 14;return (
 
-                  this.$fetch(this.$api.wxLogin, { openId: this.openid }, 'GET'));case 14:msg = _context2.sent;
+                  _this3.$fetch(_this3.$api.wxLogin, { openId: _this3.openid }, 'GET'));case 14:msg = _context2.sent;
+                console.log(msg);
                 uni.setStorageSync('token', msg.data.token);
-                this.$emit('fresh', true);
+                _this3.$emit('fresh', true);
                 console.log(msg);
                 uni.removeStorageSync('showLogin');
                 // 注册成功清除邀请码缓存
-                uni.removeStorageSync('qrCode');_context2.next = 29;break;case 22:_context2.next = 24;return (
+                uni.removeStorageSync('qrCode');_context2.next = 30;break;case 23:_context2.next = 25;return (
 
-                  this.$fetch(this.$api.wxLogin, { openId: this.openid }, 'GET'));case 24:_msg = _context2.sent;
+                  _this3.$fetch(_this3.$api.wxLogin, { openId: _this3.openid }, 'GET'));case 25:_msg = _context2.sent;
                 uni.setStorageSync('token', _msg.data.token);
                 uni.removeStorageSync('showLogin');
-                this.$emit('fresh', true);
-                console.log(_msg);case 29:_context2.next = 53;break;case 31:_context2.next = 33;return (
+                _this3.$emit('fresh', true);
+                console.log(_msg);case 30:_context2.next = 62;break;case 32:_context2.next = 34;return (
 
 
-                  this.$fetch(this.$api.register, {
-                    openId: this.openid, userName: this.nickName, mobile: this.phone, sex: this.sex, avatar: this.avatar },
-                  'GET'));case 33:_res = _context2.sent;if (!(
-
-                _res.code === 0)) {_context2.next = 46;break;}
+                  _this3.$fetch(_this3.$api.register, {
+                    openId: _this3.openid, userName: _this3.nickName, mobile: _this3.phone, sex: _this3.sex, avatar: _this3.avatar },
+                  'GET'));case 34:_res = _context2.sent;
+                console.log(_res);
+                console.log(214);if (!(
+                _res.code === 0)) {_context2.next = 52;break;}
                 uni.showToast({
                   icon: 'none',
-                  title: _res.msg });_context2.next = 38;return (
+                  title: _res.msg });_context2.next = 41;return (
 
-                  this.$fetch(this.$api.wxLogin, { openId: this.openid }, 'GET'));case 38:_msg2 = _context2.sent;
-                uni.setStorageSync('token', _msg2.data.token);
-                this.$emit('fresh', true);
+                  _this3.$fetch(_this3.$api.wxLogin, { openId: _this3.openid }, 'GET'));case 41:_msg2 = _context2.sent;
                 console.log(_msg2);
+                console.log(223);
+                uni.setStorageSync('token', _msg2.data.token);
+                _this3.$emit('fresh', true);
+                console.log(_msg2);
+                console.log(223);
                 uni.removeStorageSync('showLogin');
                 // 注册成功清除邀请码缓存
-                uni.removeStorageSync('qrCode');_context2.next = 53;break;case 46:_context2.next = 48;return (
+                uni.removeStorageSync('qrCode');_context2.next = 62;break;case 52:_context2.next = 54;return (
 
-                  this.$fetch(this.$api.wxLogin, { openId: this.openid }, 'GET'));case 48:_msg3 = _context2.sent;
+                  _this3.$fetch(_this3.$api.wxLogin, { openId: _this3.openid }, 'GET'));case 54:_msg3 = _context2.sent;
+                console.log(_msg3);
+                console.log(230);
                 uni.setStorageSync('token', _msg3.data.token);
                 uni.removeStorageSync('showLogin');
-                this.$emit('fresh', true);
-                console.log(_msg3);case 53:case "end":return _context2.stop();}}}, _callee2, this);}));function reg(_x) {return _reg.apply(this, arguments);}return reg;}() },
+                _this3.$emit('fresh', true);
+                console.log(_msg3);
+                console.log(230);case 62:case "end":return _context2.stop();}}}, _callee2);}))();
 
 
 
 
 
-
+    } },
 
   watch: {
     show: function show() {

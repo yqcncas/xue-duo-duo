@@ -96,8 +96,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components = {
-  "uni-popup": () =>
-    __webpack_require__.e(/*! import() | components/uni-popup/uni-popup */ "components/uni-popup/uni-popup").then(__webpack_require__.bind(null, /*! @/components/uni-popup/uni-popup.vue */ 316))
+  "uni-popup": function() {
+    return __webpack_require__.e(/*! import() | components/uni-popup/uni-popup */ "components/uni-popup/uni-popup").then(__webpack_require__.bind(null, /*! @/components/uni-popup/uni-popup.vue */ 316))
+  }
 }
 var render = function() {
   var _vm = this
@@ -136,7 +137,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 33));
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/regenerator */ 33));
 
 
 
@@ -337,30 +338,30 @@ var _config = __webpack_require__(/*! @/config */ 16);function _interopRequireDe
 
   methods: {
     // 获取课程详情
-    getCourseInfo: function () {var _getCourseInfo = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var _this = this;var _ref, res, i, diff1, diff2;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
-                  this.$fetch(this.$api.getCourseInfo, { courseId: this.courseId }, 'GET'));case 2:_ref = _context.sent;res = _ref.data;
-                this.showContainer = true;
+    getCourseInfo: function getCourseInfo() {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var _yield$_this$$fetch, res, i, diff1, diff2;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
+                  _this.$fetch(_this.$api.getCourseInfo, { courseId: _this.courseId }, 'GET'));case 2:_yield$_this$$fetch = _context.sent;res = _yield$_this$$fetch.data;
+                _this.showContainer = true;
                 console.log(res.course);
-                this.detail.course = res.course;
+                _this.detail.course = res.course;
 
                 // 大纲
                 if (res.chapterList.length > 3) {
                   for (i = 0; i < 3; i++) {
-                    this.lessonOutline.push(res.chapterList[i]);
+                    _this.lessonOutline.push(res.chapterList[i]);
                   }
                 } else {
-                  this.lessonOutline = res.chapterList;
+                  _this.lessonOutline = res.chapterList;
                 }
-                this.allOutLine = res.chapterList;
+                _this.allOutLine = res.chapterList;
                 // 时间
-                if (this.grOrLes == 1) {
-                  diff1 = this.$dayjs(this.detail.course.assemble.estimateEndTime);
-                  diff2 = this.$dayjs();
-                  this.diffTotal = diff1.diff(diff2, 'second');
-                  clearInterval(this.timer);
-                  this.timer = null;
-                  this.cutDownTimer();
-                  this.timer = setInterval(function () {
+                if (_this.grOrLes == 1) {
+                  diff1 = _this.$dayjs(_this.detail.course.assemble.estimateEndTime);
+                  diff2 = _this.$dayjs();
+                  _this.diffTotal = diff1.diff(diff2, 'second');
+                  clearInterval(_this.timer);
+                  _this.timer = null;
+                  _this.cutDownTimer();
+                  _this.timer = setInterval(function () {
                     _this.diffTotal--;
                     if (_this.diffTotal <= 0) {
                       _this.day = 0;
@@ -372,8 +373,8 @@ var _config = __webpack_require__(/*! @/config */ 16);function _interopRequireDe
                     }
                     _this.cutDownTimer();
                   }, 1000);
-                }case 10:case "end":return _context.stop();}}}, _callee, this);}));function getCourseInfo() {return _getCourseInfo.apply(this, arguments);}return getCourseInfo;}(),
-
+                }case 10:case "end":return _context.stop();}}}, _callee);}))();
+    },
     // 查看全部课程
     hanldeOpenTotal: function hanldeOpenTotal() {
       uni.navigateTo({
@@ -387,23 +388,23 @@ var _config = __webpack_require__(/*! @/config */ 16);function _interopRequireDe
 
     },
     // 加入购物车
-    handleAddCart: function () {var _handleAddCart = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var res;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:if (!(
-                this.grOrLes == 1 && this.diffTotal <= 0)) {_context2.next = 2;break;}return _context2.abrupt("return",
+    handleAddCart: function handleAddCart() {var _this2 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var res;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:if (!(
+                _this2.grOrLes == 1 && _this2.diffTotal <= 0)) {_context2.next = 2;break;}return _context2.abrupt("return",
                 uni.showToast({
                   icon: 'none',
                   title: '该拼团时间已结束,请重新进行选择' }));case 2:if (!(
 
 
-                this.detail.course.teachers.length > 1)) {_context2.next = 7;break;}
-                this.orderPayFlag = 0;
-                this.$refs.popupPay.open();_context2.next = 13;break;case 7:_context2.next = 9;return (
+                _this2.detail.course.teachers.length > 1)) {_context2.next = 7;break;}
+                _this2.orderPayFlag = 0;
+                _this2.$refs.popupPay.open();_context2.next = 13;break;case 7:_context2.next = 9;return (
 
-                  this.$fetch(this.$api.addCart, { courseId: this.courseId, teacherId: this.detail.course.teacherId }, 'GET'));case 9:res = _context2.sent;if (!
+                  _this2.$fetch(_this2.$api.addCart, { courseId: _this2.courseId, teacherId: _this2.detail.course.teacherId }, 'GET'));case 9:res = _context2.sent;if (!
                 res.code) {_context2.next = 12;break;}return _context2.abrupt("return", uni.showToast({ title: res.msg, icon: 'none' }));case 12:
-                uni.showToast({ title: '加入购物车成功~' });case 13:case "end":return _context2.stop();}}}, _callee2, this);}));function handleAddCart() {return _handleAddCart.apply(this, arguments);}return handleAddCart;}(),
+                uni.showToast({ title: '加入购物车成功~' });case 13:case "end":return _context2.stop();}}}, _callee2);}))();
 
 
-
+    },
     cutDownTimer: function cutDownTimer() {
       this.day = parseInt(this.diffTotal / 60 / 60 / 24);
       this.hour = Math.floor(this.diffTotal / (60 * 60));
@@ -439,48 +440,48 @@ var _config = __webpack_require__(/*! @/config */ 16);function _interopRequireDe
       this.$refs.popupPay.close();
     },
     // 多个老师下单
-    choiceTeacher: function () {var _choiceTeacher = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee3() {var res, _res;return _regenerator.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:
-                this.teacherId = this.detail.course.teacherId.split(',')[this.circleIndex];if (!
-                this.orderPayFlag) {_context3.next = 12;break;}
+    choiceTeacher: function choiceTeacher() {var _this3 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee3() {var res, _res;return _regenerator.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:
+                _this3.teacherId = _this3.detail.course.teacherId.split(',')[_this3.circleIndex];if (!
+                _this3.orderPayFlag) {_context3.next = 12;break;}
                 uni.showLoading({
                   title: '加载中' });_context3.next = 5;return (
 
-                  this.$fetch(this.$api.genOrderFromCourse, { courseId: this.courseId, teacherId: this.teacherId }, 'GET'));case 5:res = _context3.sent;if (!
+                  _this3.$fetch(_this3.$api.genOrderFromCourse, { courseId: _this3.courseId, teacherId: _this3.teacherId }, 'GET'));case 5:res = _context3.sent;if (!
                 res.code) {_context3.next = 8;break;}return _context3.abrupt("return", uni.showToast({ title: res.msg, icon: 'none' }));case 8:
                 uni.hideLoading();
                 uni.navigateTo({
                   url: '../orderDeatail/OrderDetail?orderId=' + res.data.orderId });_context3.next = 19;break;case 12:_context3.next = 14;return (
 
 
-                  this.$fetch(this.$api.addCart, { courseId: this.courseId, teacherId: this.teacherId }, 'GET'));case 14:_res = _context3.sent;if (!
+                  _this3.$fetch(_this3.$api.addCart, { courseId: _this3.courseId, teacherId: _this3.teacherId }, 'GET'));case 14:_res = _context3.sent;if (!
                 _res.code) {_context3.next = 17;break;}return _context3.abrupt("return", uni.showToast({ title: _res.msg, icon: 'none' }));case 17:
                 uni.showToast({ title: '加入购物车成功~' });
-                this.$refs.popupPay.close();case 19:case "end":return _context3.stop();}}}, _callee3, this);}));function choiceTeacher() {return _choiceTeacher.apply(this, arguments);}return choiceTeacher;}(),
+                _this3.$refs.popupPay.close();case 19:case "end":return _context3.stop();}}}, _callee3);}))();
 
 
-
+    },
     // 课程直接生成订单
-    handleOpenLive: function () {var _handleOpenLive = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee4() {var res;return _regenerator.default.wrap(function _callee4$(_context4) {while (1) {switch (_context4.prev = _context4.next) {case 0:if (!(
-                this.grOrLes == 1 && this.diffTotal <= 0)) {_context4.next = 2;break;}return _context4.abrupt("return",
+    handleOpenLive: function handleOpenLive() {var _this4 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee4() {var res;return _regenerator.default.wrap(function _callee4$(_context4) {while (1) {switch (_context4.prev = _context4.next) {case 0:if (!(
+                _this4.grOrLes == 1 && _this4.diffTotal <= 0)) {_context4.next = 2;break;}return _context4.abrupt("return",
                 uni.showToast({
                   icon: 'none',
                   title: '该拼团时间已结束,请重新进行选择' }));case 2:if (!(
 
 
 
-                this.detail.course.teachers.length > 1)) {_context4.next = 7;break;}
-                this.orderPayFlag = 1;
-                this.$refs.popupPay.open();_context4.next = 13;break;case 7:_context4.next = 9;return (
+                _this4.detail.course.teachers.length > 1)) {_context4.next = 7;break;}
+                _this4.orderPayFlag = 1;
+                _this4.$refs.popupPay.open();_context4.next = 13;break;case 7:_context4.next = 9;return (
 
-                  this.$fetch(this.$api.genOrderFromCourse, { courseId: this.courseId, teacherId: this.detail.course.teacherId }, 'GET'));case 9:res = _context4.sent;if (!
+                  _this4.$fetch(_this4.$api.genOrderFromCourse, { courseId: _this4.courseId, teacherId: _this4.detail.course.teacherId }, 'GET'));case 9:res = _context4.sent;if (!
                 res.code) {_context4.next = 12;break;}return _context4.abrupt("return", uni.showToast({ title: res.msg, icon: 'none' }));case 12:
                 // 已生成订单之后 
                 uni.navigateTo({
-                  url: '../orderDeatail/OrderDetail?orderId=' + res.data.orderId });case 13:case "end":return _context4.stop();}}}, _callee4, this);}));function handleOpenLive() {return _handleOpenLive.apply(this, arguments);}return handleOpenLive;}(),
+                  url: '../orderDeatail/OrderDetail?orderId=' + res.data.orderId });case 13:case "end":return _context4.stop();}}}, _callee4);}))();
 
 
 
-
+    },
 
     // 打开教师详情
     handleOpenTeacherDetail: function handleOpenTeacherDetail(id) {
